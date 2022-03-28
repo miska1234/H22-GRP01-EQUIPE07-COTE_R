@@ -8,6 +8,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProjetAppliactionCoteR" />
+        android:theme="@style/Theme.ProjetAppliactionCoteR">
+        <activity
+            android:name=".CreationProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UniversiteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcceuilleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConnectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoteRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnregistrementActivity"
+            android:exported="false" />
+    </application>
 
 </manifest>
