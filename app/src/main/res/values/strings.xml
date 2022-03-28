@@ -20,4 +20,5 @@
     <string name="info_cote_r">Info Cote R</string>
     <string name="nom">Nom</string>
     <string name="cote_r">Cote R</string>
+    <string name="nomComplet">Nom Complet</string>
 </resources>

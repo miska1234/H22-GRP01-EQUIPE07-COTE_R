@@ -19,6 +19,11 @@
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_acceuille.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_connection.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cote_ractivity.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_creation_profil.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_enregistrement.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_enregistrement_v2.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
@@ -27,5 +32,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3098958333333333" />
+      </ProjectState>
+    </option>
   </component>
 </project>
