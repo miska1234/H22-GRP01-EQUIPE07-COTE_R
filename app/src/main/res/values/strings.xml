@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">ProjetAppliactionCoteR</string>
+
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="email">Email</string>
+    <string name="enregistrement">Enregistrement</string>
+    <string name="s_enregistrer">S\'enregistrer</string>
+    <string name="d_ja_un_compte">Déja un compte</string>
+    <string name="todo">TODO</string>
+    <string name="bienvenue">Bienvenue dans l\'appliccation calculateur de cote R</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="connection">Connection</string>
+    <string name="mot_de_passe_oublier">Mot de passe oublier</string>
+    <string name="profil">Profil</string>
+    <string name="ecole">École</string>
+    <string name="programme">Programme</string>
+    <string name="age">Age</string>
+    <string name="sauvegarde">Sauvegarde</string>
+    <string name="info_universite">Info université</string>
+    <string name="info_cote_r">Info Cote R</string>
+    <string name="nom">Nom</string>
+    <string name="cote_r">Cote R</string>
 </resources>

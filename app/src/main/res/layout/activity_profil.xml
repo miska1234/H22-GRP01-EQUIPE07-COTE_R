@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/turquoise"
     tools:context=".ProfilActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewVereficationProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/profil"
+        android:textAlignment="center"
+        android:textColor="@color/gris"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_below="@id/textViewVereficationProfile"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/editTextEcole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewAvatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:autofillHints="École"
+        android:ems="10"
+        android:hint="@string/ecole"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/editTextProgramme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextEcole"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:autofillHints="Programme"
+        android:ems="10"
+        android:hint="@string/programme"
+        android:inputType="textPassword"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextProgramme"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:autofillHints="Age"
+        android:ems="10"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:textColor="@color/black"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/buttonVerificationProfile"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button"
+        android:text="@string/sauvegarde"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+
+
+</RelativeLayout>
