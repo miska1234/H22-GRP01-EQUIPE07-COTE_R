@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class CoteRActivity extends AppCompatActivity {
-//TEST COMMIT
+//TEST COMMIT SUR BRANCHE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
