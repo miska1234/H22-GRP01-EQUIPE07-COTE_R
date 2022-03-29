@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 public class CreationProfilActivity extends AppCompatActivity {
 
+
+    //Changer cette classe pour une classe de modification de profil
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

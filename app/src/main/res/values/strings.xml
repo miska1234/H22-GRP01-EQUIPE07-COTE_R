@@ -21,4 +21,20 @@
     <string name="nom">Nom</string>
     <string name="cote_r">Cote R</string>
     <string name="nomComplet">Nom Complet</string>
+    <string name="nomCompletRequis">le nom complet est requis</string>
+    <string name="ageRequis">l’age est requis</string>
+    <string name="ecoleRequis">Le nom de l’école est requis</string>
+    <string name="programmeRequis">Le programme est requis</string>
+    <string name="emailRequis">Le email est requis</string>
+    <string name="emailNonValide">Le email n’est pas valide</string>
+    <string name="motDePasseRequis">"Votre mot de passe devrait avoir :\n
+                    - Au moins six char\n
+                    - Au moins un nombre\n
+                    - Au moins un char special\n
+                    - Pas d’espace</string>
+    <string name="verificationEmail">Le compte a été crée!!!! Il ne reste plus qu’à vérifier votre email dans votre boite de récéption.</string>
+    <string name="bouttonRetourApresVerification">Retour à l’acceuil</string>
+    <string name="UtilisateurEnregistrer">L’utilisateur a été enregistré</string>
+    <string name="UtilisateurNonEnregistrer">L’utilisateur n’a pas été enregistré</string>
+
 </resources>
