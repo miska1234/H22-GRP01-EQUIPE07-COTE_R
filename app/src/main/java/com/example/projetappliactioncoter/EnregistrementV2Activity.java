@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,14 +16,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 
 public class EnregistrementV2Activity extends AppCompatActivity {
 
-    private TextView nomComplet, age, ecole, programme, email, motDePasse;
+    private EditText nomComplet, age, ecole, programme, email, motDePasse;
+    private TextView dejaCompte;
     private Button enregistrer;
     private FirebaseAuth mAuth;
+
+    //TODO mettre les noms d ecoles et de programme dans une liste et faire bhy banderolz
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,7 @@ public class EnregistrementV2Activity extends AppCompatActivity {
         programme = findViewById(R.id.editTextProgramme);
         email = findViewById(R.id.editTextEmailAddress);
         motDePasse = findViewById(R.id.editTextPassword);
+        dejaCompte = findViewById(R.id.textViewDejaCompte);
 
         enregistrer = findViewById(R.id.buttonSenregistrer);
 
@@ -44,6 +50,11 @@ public class EnregistrementV2Activity extends AppCompatActivity {
 
     public void onClick(View view) {
         EnregistrerUtilisateur();
+    }
+
+    public void onClickDejaCompte(View view) {
+        Intent switchToConnection = new Intent(EnregistrementV2Activity.this, ConnectionActivity.class);
+        startActivity(switchToConnection);
     }
 
     public void EnregistrerUtilisateur(){
@@ -99,10 +110,10 @@ public class EnregistrementV2Activity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-
-                            //Add progress bar
                             Utilisateur utilisateur = new Utilisateur(nomComplet, age, ecole, programme, email);
 
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            user.sendEmailVerification();
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(utilisateur).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -123,6 +134,7 @@ public class EnregistrementV2Activity extends AppCompatActivity {
                         }
                     }
                 });
+
 
 
     }
@@ -158,4 +170,6 @@ public class EnregistrementV2Activity extends AppCompatActivity {
         }
         return true;
     }
+
+
 }
