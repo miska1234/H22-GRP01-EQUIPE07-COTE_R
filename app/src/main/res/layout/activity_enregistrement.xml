@@ -47,16 +47,16 @@ tools:context=".EnregistrementActivity">
     android:textColor="@color/black" />
 
 
-<Button
-    android:id="@+id/buttonSenregistrer"
-    android:layout_width="300dp"
-    android:layout_height="100dp"
-    android:layout_centerInParent="true"
-    android:background="@drawable/button"
-    android:text="@string/s_enregistrer"
-    android:textAllCaps="false"
-    android:textColor="#FFFFFF"
-    android:textSize="30sp" />
+    <Button
+        android:id="@+id/buttonSenregistrer"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button"
+        android:text="@string/s_enregistrer"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
 <TextView
     android:id="@+id/textViewDejaCompte"

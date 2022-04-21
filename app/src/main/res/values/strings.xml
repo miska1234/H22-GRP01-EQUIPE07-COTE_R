@@ -36,5 +36,10 @@
     <string name="bouttonRetourApresVerification">Retour à l’acceuil</string>
     <string name="UtilisateurEnregistrer">L’utilisateur a été enregistré</string>
     <string name="UtilisateurNonEnregistrer">L’utilisateur n’a pas été enregistré</string>
+    <string name="resetButton">Réinitialiser</string>
+    <string name="resetTextView">Réinitialisation du mot de passe</string>
+    <string name="resetEditText">Entrée votre email</string>
+
+
 
 </resources>

@@ -52,11 +52,10 @@ public class ConnectionActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.textViewMotPasseOblier:
                 //TODO faire le activity de motdepasseoublier
-                /*
-                Intent switchToProfil = new Intent(EnregistrementV2Activity.this, VerificationEmailActivity.class);
-                startActivity(switchToProfil);
 
-                 */
+                Intent switchToReset = new Intent(ConnectionActivity.this, ResetPassword.class);
+                startActivity(switchToReset);
+
                 break;
             case R.id.textViewSenregistrer:
                 Intent switchToEnregistrer = new Intent(ConnectionActivity.this, EnregistrementV2Activity.class);
