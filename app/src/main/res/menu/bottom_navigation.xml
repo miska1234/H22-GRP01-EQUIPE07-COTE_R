@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/echange_livre"
+        android:icon="@drawable/ic_echange_de_livre"
+        android:title="@string/echange_de_livre"/>
+
+    <item
+        android:id="@+id/cote_r_logo"
+        android:icon="@drawable/ic_calculatrice_cote_r"
+        android:title="@string/calculatrice_cote_r"/>
+    <item
+        android:id="@+id/profil_view"
+        android:icon="@drawable/ic_profil_view"
+        android:title="@string/profil_view"/>
+    <item
+        android:id="@+id/universite"
+        android:icon="@drawable/ic_universite"
+        android:title="@string/universite"/>
+
+    <item
+        android:id="@+id/timer"
+        android:icon="@drawable/ic_baseline_timer_24"
+        android:title="@string/timer"/>
+
+</menu>
