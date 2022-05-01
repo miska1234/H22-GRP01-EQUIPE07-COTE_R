@@ -11,15 +11,15 @@ android:gravity="center"
 tools:context=".AcceuilleActivity">
 
 
-<TextView
-    android:id="@+id/textViewBienvenu"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/bienvenue"
-    android:textAlignment="center"
-    android:textColor="@color/gris"
-    android:textSize="30sp"
-    android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textViewBienvenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bienvenue"
+        android:textAlignment="center"
+        android:textColor="@color/gris"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 <Button
     android:id="@+id/buttonAllerSenregistrer"

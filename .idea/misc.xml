@@ -18,6 +18,12 @@
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/layout/activity_universite.xml" value="0.2346014492753623" />
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_coteR_background.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_coter_Real.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/ic_echange_de_livre.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_profil_view.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_universite.xml" value="0.1985" />
         <entry key="app/src/main/res/layout/activity_acceuille.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_connection.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_cote_ractivity.xml" value="0.3098958333333333" />
@@ -42,6 +48,7 @@
         <entry key="app/src/main/res/layout/fragment_universitez.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.21354166666666666" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_coter.xml" value="0.1645" />
       </map>
     </option>
   </component>

@@ -12,7 +12,7 @@ public class PomodoroFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_calculatrice_cote_r, container, false);
+        return inflater.inflate(R.layout.fragment_pomodoro, container, false);
     }
 
 
