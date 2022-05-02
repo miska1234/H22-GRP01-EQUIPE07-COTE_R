@@ -18,6 +18,13 @@
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/layout/activity_universite.xml" value="0.2346014492753623" />
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Miska/AndroidStudioProjects/ProjetAppliactionCoteR/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_calculatrice_cote_r.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_coteR_background.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_coter_Real.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/ic_echange_de_livre.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_profil_view.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_universite.xml" value="0.1985" />
         <entry key="app/src/main/res/layout/activity_acceuille.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_connection.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_cote_ractivity.xml" value="0.3098958333333333" />
@@ -26,10 +33,25 @@
         <entry key="app/src/main/res/layout/activity_enregistrement_v2.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_logo.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/activity_menu_v2.xml" value="0.19947916666666668" />
+        <entry key="app/src/main/res/layout/activity_menu_v2_activty.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_menu_v3.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_profil.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_universite.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_verification_email.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/fragment_calculatrice_cote_r.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_calculatricecoter_realcalcul.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_echange_livre.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_pomodoro.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_profil.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_profil2.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_universitez.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/recyclerview_row.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.21354166666666666" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_coter.xml" value="0.1645" />
       </map>
     </option>
   </component>

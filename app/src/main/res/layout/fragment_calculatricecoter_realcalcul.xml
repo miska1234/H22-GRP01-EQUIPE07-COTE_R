@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/turquoise"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Calculatrice Cote R :"
+            android:textSize="32sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:background="@color/turquoise">
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:hint="Matière"
+            android:textSize="18sp"
+            android:id="@+id/matiere_calculatrice_cote_r"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:inputType="numberDecimal"
+            android:layout_alignTop="@+id/matiere_calculatrice_cote_r"
+            android:layout_marginTop="70dp"
+            android:hint="Note"
+            android:textSize="18sp"
+            android:id="@+id/note_calculatrice_cote_r"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:inputType="numberDecimal"
+            android:layout_alignTop="@+id/note_calculatrice_cote_r"
+            android:layout_marginTop="70dp"
+            android:hint="Moyenne"
+            android:textSize="18sp"
+            android:id="@+id/moyenne_calculatrice_cote_r"/>
+
+        <EditText
+            android:id="@+id/ecart_type_calculatrice_cote_r"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/moyenne_calculatrice_cote_r"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:hint="Écart Type"
+            android:inputType="numberDecimal"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/moyenne_secondaire_calculatrice_cote_r"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/ecart_type_calculatrice_cote_r"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:hint="Moyenne au secondaire"
+            android:inputType="numberDecimal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/moyenne_secondaire_calculatrice_cote_r"
+            android:layout_marginTop="50dp"
+            android:text="**Écrire 75% si vous ne savez pas**"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/red"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <!--> TODO add le onClick pour ajouter cote r<-->
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ajouterModifiercoter"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button"
+            android:text="Ajouter/Modifier Cote R"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -71,7 +71,7 @@ public class ResetPassword extends AppCompatActivity {
                     Intent switchToConnection = new Intent(ResetPassword.this, ConnectionActivity.class);
                     startActivity(switchToConnection);
                 }else{
-                    Toast.makeText(ResetPassword.this, "veuillez recommencer, le courriel rentré n’est pas bon", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ResetPassword.this, "Veuillez recommencer, le courriel rentré n’est pas bon", Toast.LENGTH_SHORT).show();
                 }
             }
         });

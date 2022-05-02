@@ -72,7 +72,8 @@ public class ConnectionActivity extends AppCompatActivity implements View.OnClic
         String motDePasseTexte = motDePasse.getText().toString().trim();
 
         if(emailTexte.isEmpty() || motDePasseTexte.isEmpty()){
-            Toast.makeText(this, "Champs de texte vide, veuillez les remplirs!", Toast.LENGTH_SHORT).show();
+              Toast.makeText(ConnectionActivity.this, "Champs de texte vide, veuillez les remplirs!", Toast.LENGTH_SHORT).show();
+
         }else{
             mAuth.signInWithEmailAndPassword(emailTexte, motDePasseTexte).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -82,7 +83,7 @@ public class ConnectionActivity extends AppCompatActivity implements View.OnClic
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                         if(user.isEmailVerified()){
-                            Intent switchToMenu = new Intent(ConnectionActivity.this, MenuActivity.class);
+                            Intent switchToMenu = new Intent(ConnectionActivity.this, MenuV2Activity.class);
                             startActivity(switchToMenu);
                         } else {
                             user.sendEmailVerification();
