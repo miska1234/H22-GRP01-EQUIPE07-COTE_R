@@ -45,10 +45,30 @@
     <string name="profil_view">profil_view</string>
     <string name="universite">universite</string>
     <string name="title_activity_menu_v2">zioubankz</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="titreProfilFragment">Profil</string>
     <string name="nom_complet_profil">Nom complet</string>
+    <string name="ajouter_cote_r">Ajouter Cote R</string>
+
+    <string-array name="coursTest">
+        <item>Physique</item>
+        <item>Math</item>
+        <item>Français</item>
+        <item>Philo</item>
+        <item>Éduc</item>
+        <item>Art</item>
+
+    </string-array>
+
+    <string-array name="Cote_r">
+        <item>Cote r : 38.5</item>
+        <item>Cote r : 27</item>
+        <item>Cote r : 35</item>
+        <item>Cote r : 32</item>
+        <item>Cote r : 33</item>
+        <item>Cote r : 29</item>
+
+    </string-array>
 
 
 </resources>

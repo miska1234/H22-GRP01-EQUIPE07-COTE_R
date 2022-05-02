@@ -29,6 +29,7 @@ public class MenuV2Activity extends AppCompatActivity  {
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         logoutTextView = (ImageView) findViewById(R.id.logoutButton);
 
+        //TODO setOnClickListener pour le menubutton
         logoutTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -9,6 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="turquoise">#C6F1E7</color>
     <color name="gris">#777777</color>
+    <color name="tan">#e3cdb3</color>
+    <color name="blueblack">#111f28</color>
+    <color name="red">#FF0000</color>
+
+
 
 
 </resources>
