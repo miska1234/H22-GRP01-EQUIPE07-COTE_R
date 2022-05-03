@@ -84,6 +84,7 @@ public class ProfilFragment extends Fragment {
         final TextView ageTextView = (TextView) view.findViewById(R.id.texte_profil_age_shown);
         final TextView ecoleTextView = (TextView) view.findViewById(R.id.texte_profil_ecole_shown);
         final TextView programmeTextView = (TextView) view.findViewById(R.id.texte_profil_programme_shown);
+        final TextView coteRTextView = (TextView) view.findViewById(R.id.texte_profil_coteR_shown);
 
         //TODO rajouter un progress bar en attendant que les info load in avec un addOnCompleteListner
         //TODO rajouter un image picker pour l image du profil
@@ -104,6 +105,12 @@ public class ProfilFragment extends Fragment {
                     ageTextView.setText(age + " ans");
                     ecoleTextView.setText(ecole);
                     programmeTextView.setText(programme);
+                    if(userProfil.coteRArraylist.get(0).matiere.equals("Effacable")){
+                        coteRTextView.setText("Pas de Cote R encore");
+                    } else {
+                        coteRTextView.setText(String.valueOf(CoteR.calculCoteRFinal(userProfil.coteRArraylist)));
+                    }
+
 
 
                 }

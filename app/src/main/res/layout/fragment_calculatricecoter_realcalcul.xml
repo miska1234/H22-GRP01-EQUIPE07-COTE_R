@@ -29,13 +29,13 @@
         android:background="@color/turquoise">
 
         <EditText
+            android:id="@+id/matiere_calculatrice_cote_r"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="20dp"
             android:hint="Matière"
-            android:textSize="18sp"
-            android:id="@+id/matiere_calculatrice_cote_r"/>
+            android:textSize="18sp" />
 
         <EditText
             android:layout_width="200dp"
@@ -43,7 +43,7 @@
             android:layout_centerHorizontal="true"
             android:inputType="numberDecimal"
             android:layout_alignTop="@+id/matiere_calculatrice_cote_r"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:hint="Note"
             android:textSize="18sp"
             android:id="@+id/note_calculatrice_cote_r"/>
@@ -54,7 +54,7 @@
             android:layout_centerHorizontal="true"
             android:inputType="numberDecimal"
             android:layout_alignTop="@+id/note_calculatrice_cote_r"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:hint="Moyenne"
             android:textSize="18sp"
             android:id="@+id/moyenne_calculatrice_cote_r"/>
@@ -65,7 +65,7 @@
             android:layout_height="50dp"
             android:layout_alignTop="@+id/moyenne_calculatrice_cote_r"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:hint="Écart Type"
             android:inputType="numberDecimal"
             android:textSize="18sp" />
@@ -77,8 +77,18 @@
             android:layout_height="50dp"
             android:layout_alignTop="@+id/ecart_type_calculatrice_cote_r"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:hint="Moyenne au secondaire"
+            android:inputType="numberDecimal"
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/nbr_unites_calculatrice_cote_r"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/information_sur_moyenne_secondaire"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="Nombre d’unités"
             android:inputType="numberDecimal"
             android:textSize="18sp" />
 
@@ -89,7 +99,8 @@
             android:layout_marginTop="50dp"
             android:text="**Écrire 75% si vous ne savez pas**"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/red"/>
+            android:textColor="@color/red"
+            android:id="@+id/information_sur_moyenne_secondaire"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"

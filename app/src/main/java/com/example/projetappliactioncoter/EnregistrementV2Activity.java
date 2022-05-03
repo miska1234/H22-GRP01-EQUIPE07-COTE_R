@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 
 public class EnregistrementV2Activity extends AppCompatActivity {
 
@@ -110,7 +112,10 @@ public class EnregistrementV2Activity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Utilisateur utilisateur = new Utilisateur(nomComplet, age, ecole, programme, email);
+                            ArrayList<CoteR> coteRS = new ArrayList<>();
+                            //Creer une liste fictive qui va servir qu a creer la liste dans le database(va etre remplacer apres)
+                            coteRS.add(new CoteR("Effacable", (double)0, (double)0, (double)0, (double)0, (double)0));
+                            Utilisateur utilisateur = new Utilisateur(nomComplet, age, ecole, programme, email, coteRS);
 
                             FirebaseUser user = mAuth.getCurrentUser();
                             user.sendEmailVerification();
