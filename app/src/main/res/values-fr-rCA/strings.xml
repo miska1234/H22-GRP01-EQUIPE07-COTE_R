@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">ProjetAppliactionCoteR</string>
+
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="email">Email</string>
+    <string name="enregistrement">Enregistrement</string>
+    <string name="s_enregistrer">S\'enregistrer</string>
+    <string name="d_ja_un_compte">Déja un compte</string>
+    <string name="todo">TODO</string>
+    <string name="bienvenue">Bienvenue dans l\'application calculateur de cote R</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="connection">Connection</string>
+    <string name="mot_de_passe_oublier">Mot de passe oublier</string>
+    <string name="profil">Profil</string>
+    <string name="ecole">École</string>
+    <string name="programme">Programme</string>
+    <string name="age">Age</string>
+    <string name="sauvegarde">Sauvegarde</string>
+    <string name="info_universite">Info université</string>
+    <string name="info_cote_r">Info Cote R</string>
+    <string name="nom">Nom</string>
+    <string name="cote_r">Cote R</string>
+    <string name="nomComplet">Nom Complet</string>
+    <string name="nomCompletRequis">le nom complet est requis</string>
+    <string name="ageRequis">l’age est requis</string>
+    <string name="ecoleRequis">Le nom de l’école est requis</string>
+    <string name="programmeRequis">Le programme est requis</string>
+    <string name="emailRequis">Le email est requis</string>
+    <string name="emailNonValide">Le email n’est pas valide</string>
+    <string name="motDePasseRequis">"Votre mot de passe devrait avoir :\n
+                    - Au moins six char\n
+                    - Au moins un nombre\n
+                    - Au moins un char special\n
+                    - Pas d’espace</string>
+    <string name="verificationEmail">Le compte a été crée!!!! Il ne reste plus qu’à vérifier votre email dans votre boite de récéption.</string>
+    <string name="bouttonRetourApresVerification">Retour à l’acceuil</string>
+    <string name="UtilisateurEnregistrer">L’utilisateur a été enregistré</string>
+    <string name="UtilisateurNonEnregistrer">L’utilisateur n’a pas été enregistré</string>
+    <string name="resetButton">Réinitialiser</string>
+    <string name="resetTextView">Réinitialisation du mot de passe</string>
+    <string name="resetEditText">Entrée votre email</string>
+    <string name="timer">timer</string>
+    <string name="calculatrice_cote_r">calculatrice_cote_r</string>
+    <string name="echange_de_livre">echange_de_livre</string>
+    <string name="profil_view">profil_view</string>
+    <string name="universite">universite</string>
+    <string name="title_activity_menu_v2">zioubankz</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titreProfilFragment">Profil</string>
+    <string name="nom_complet_profil">Nom complet</string>
+    <string name="ajouter_cote_r">Ajouter Cote R</string>
+
+    <string-array name="coursTest">
+        <item>Physique</item>
+        <item>Math</item>
+        <item>Français</item>
+        <item>Philo</item>
+        <item>Éduc</item>
+        <item>Art</item>
+
+    </string-array>
+
+    <string-array name="Cote_r">
+        <item>Cote r : 38.5</item>
+        <item>Cote r : 27</item>
+        <item>Cote r : 35</item>
+        <item>Cote r : 32</item>
+        <item>Cote r : 33</item>
+        <item>Cote r : 29</item>
+
+    </string-array>
+
+
+</resources>

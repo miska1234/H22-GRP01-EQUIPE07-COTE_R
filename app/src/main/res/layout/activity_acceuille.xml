@@ -34,17 +34,55 @@ tools:context=".AcceuilleActivity">
     android:textColor="#FFFFFF"
     android:textSize="30sp" />
 
-<Button
-    android:id="@+id/buttonAllerSeConnecter"
-    android:layout_width="300dp"
-    android:layout_height="100dp"
-    android:layout_below="@+id/buttonAllerSenregistrer"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/button"
-    android:text="@string/se_connecter"
+    <Button
+        android:id="@+id/buttonAllerSeConnecter"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/buttonAllerSenregistrer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:text="@string/se_connecter"
 
-    android:textAllCaps="false"
-    android:textColor="#FFFFFF"
-    android:textSize="30sp" />
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/buttonLangueFrancais"
+        android:layout_width="221dp"
+        android:layout_height="97dp"
+        android:layout_below="@+id/buttonAllerSenregistrer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="173dp"
+        android:background="@drawable/button"
+        android:text="francais"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/buttonLangueAnglais"
+        android:layout_width="221dp"
+        android:layout_height="97dp"
+        android:layout_below="@+id/buttonAllerSenregistrer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="307dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/button"
+        android:text="anglais"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 </RelativeLayout>

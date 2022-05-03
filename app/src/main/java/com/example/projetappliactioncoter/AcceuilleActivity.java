@@ -9,18 +9,37 @@ import android.widget.Button;
 
 public class AcceuilleActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button bouttonEnregistrer, boutonConnecter;
+    private Button bouttonEnregistrer, boutonConnecter, boutonLangueFrancais, boutonLangueAnglais;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuille);
 
+        LanguageManager lang = new LanguageManager(this);
+        boutonLangueFrancais = findViewById(R.id.buttonLangueFrancais);
+        boutonLangueAnglais = findViewById(R.id.buttonLangueAnglais);
+        boutonLangueAnglais.setOnClickListener(this);
+        boutonLangueFrancais.setOnClickListener(this);
+        boutonLangueAnglais.setOnClickListener(view -> {
+            lang.updateResource("en");
+            recreate();
+        });
+
+        boutonLangueFrancais.setOnClickListener(view -> {
+            lang.updateResource("fr");
+           recreate();
+        });
+
+
         boutonConnecter = findViewById(R.id.buttonAllerSeConnecter);
         bouttonEnregistrer = findViewById(R.id.buttonAllerSenregistrer);
 
+
         boutonConnecter.setOnClickListener(this);
         bouttonEnregistrer.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -34,7 +53,6 @@ public class AcceuilleActivity extends AppCompatActivity implements View.OnClick
                 Intent intentEnregistrer = new Intent(AcceuilleActivity.this, EnregistrementV2Activity.class);
                 startActivity(intentEnregistrer);
                 break;
-
         }
     }
 }
