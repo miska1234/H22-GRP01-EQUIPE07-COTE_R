@@ -1,15 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/turquoise">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/turquoise"
+    android:orientation="vertical"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Information sur la cote R :"
+            android:textSize="32sp" />
+
+    </RelativeLayout>
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textTitreDefinitionCoteR"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Echange de livre"
-        android:textSize="30sp" />
+        android:layout_marginTop="20dp"
+        android:text="Qu'est c eque la cote R"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
+    <TextView
+        android:id="@+id/textDefinitionCoteR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="@string/defintion_cote_r"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/textTitreRéussiteImportante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="LA RÉUSSITE OU L’ÉCHEC DE CHAQUE COURS EST IMPORTANT"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+        android:id="@+id/textRéussiteImportante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="Un échec ne peut être effacé du dossier scolaire et par conséquent, a un impact sur
+la cote R «générale » servant à l’admission dans les universités, surtout dans les
+programmes contingentés. "
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textTitreCommentCaculerCoteR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="LE CALCUL DE LA COTE DE RENDEMENT AU COLLÉGIAL"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textCommentCaculerCoteR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="L’analyse du dossier au moyen de la cote de rendement au collégial exige, pour
+chaque cours, échoué ou réussi échoué ou réussi échoué ou réussi, le calcul d’une cote Z qui permet d’exprimer la
+position relative d’un élève dans un groupe et le calcul d’un facteur de correction
+(IFG), qui permet d’estimer la force relative du groupe par rapport à celle des autres
+groupes. Ces calculs sont effectués à la demande de la Conférence des recteurs et des
+principaux des universités du Québec (CREPUQ) par le ministère de l’Éducation du ministère de l’Éducation du
+Loisir et du Sport pour chacune des notes inscrites Loisir et du Sport au bulletin, à l’exception des
+notes des cours d’appoint.
+La formule de calcul de la cote de rendement au collégial (CRC) est la suivante :
+CRC = (Z+IFG+5) x 5*  "
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+</LinearLayout>
+    </ScrollView>
+    </LinearLayout>
