@@ -12,23 +12,35 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation" />
+        android:layout_above="@+id/bottom_navigation">
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/francais"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/ic_langue_francais" />
+
+    <Button
+        android:id="@+id/anglais"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/ic_langue_anglettere" />
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
         android:id="@+id/logoutButton"
-        android:background="@drawable/ic_logout"
-        android:layout_marginStart="360dp"
-        android:layout_marginTop="20dp"/>
-
-    <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/menuButton"
-        android:background="@drawable/ic_menu"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_logout" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -36,9 +48,9 @@
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
+        app:itemIconSize="30dp"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_navigation"
-        app:itemIconSize="30dp" />
+        app:menu="@menu/bottom_navigation" />
 
 
 </RelativeLayout>

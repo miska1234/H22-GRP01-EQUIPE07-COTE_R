@@ -8,26 +8,47 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class MenuV2Activity extends AppCompatActivity  {
+public class MenuV2Activity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private ImageView logoutTextView;
+    private Button boutonLangueFrancais, boutonLangueAnglais;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_v2);
-
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         logoutTextView = (ImageView) findViewById(R.id.logoutButton);
+
+        LanguageManager lang = new LanguageManager(this);
+        boutonLangueFrancais = findViewById(R.id.francais);
+        boutonLangueAnglais = findViewById(R.id.anglais);
+
+
+        boutonLangueAnglais.setOnClickListener(view -> {
+            lang.updateResource("en");
+            recreate();
+        });
+        boutonLangueFrancais.setOnClickListener(view -> {
+            lang.updateResource("fr");
+            recreate();
+        });
+
 
         //TODO setOnClickListener pour le menubutton
         logoutTextView.setOnClickListener(new View.OnClickListener() {
@@ -43,16 +64,16 @@ public class MenuV2Activity extends AppCompatActivity  {
         navigationViewItemSelect();
 
 
-
     }
 
-    public void navigationViewItemSelect(){
+
+    public void navigationViewItemSelect() {
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
 
-                switch(item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.echange_livre:
                         fragment = new EchangeLivreFragment();
                         break;
@@ -75,7 +96,6 @@ public class MenuV2Activity extends AppCompatActivity  {
             }
         });
     }
-
 
 
 }

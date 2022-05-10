@@ -49,6 +49,11 @@
     <string name="titreProfilFragment">Profil</string>
     <string name="nom_complet_profil">Nom complet</string>
     <string name="ajouter_cote_r">Ajouter Cote R</string>
+    <string name="defintion_cote_r">La cote de rendement au collégial (CRC) est une méthode d’évaluation du dossier scolaire utilisée par la plupart des universités québécoises en vue de gérer l’admission dans certains programmes. Chaque cours possède sa cote R et l’ensemble des cours suivis donne une cote R « générale ». Il est donc important de prendre les études collégiales au sérieux dès le début de la première session.</string>
+    <string-array name="langue">
+        <item>Français</item>
+        <item>Anglais</item>
+    </string-array>
 
     <string-array name="coursTest">
         <item>Physique</item>

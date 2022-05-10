@@ -3,44 +3,44 @@
 
     <string name="mot_de_passe">Password</string>
     <string name="email">Email</string>
-    <string name="enregistrement">Sign up</string>
-    <string name="s_enregistrer">Sign up</string>
+    <string name="enregistrement">Sing up</string>
+    <string name="s_enregistrer">Sing up</string>
     <string name="d_ja_un_compte">You have acount</string>
     <string name="todo">TODO</string>
-    <string name="bienvenue">Welcome to the calculateur de cote R app</string>
+    <string name="bienvenue">I hello</string>
     <string name="se_connecter">Log in</string>
     <string name="connection">Log in</string>
-    <string name="mot_de_passe_oublier">Forgot password?</string>
+    <string name="mot_de_passe_oublier">Forgot password</string>
     <string name="profil">Profil</string>
     <string name="ecole">School</string>
     <string name="programme">Program</string>
     <string name="age">Age</string>
     <string name="sauvegarde">Save</string>
     <string name="info_universite">University information</string>
-    <string name="info_cote_r">R rating information</string>
-    <string name="nom">First name</string>
+    <string name="info_cote_r">Cote R information</string>
+    <string name="nom">Name</string>
     <string name="cote_r">Cote R</string>
-    <string name="nomComplet">Last name</string>
+    <string name="nomComplet">Full name</string>
     <string name="nomCompletRequis">Full name is required</string>
     <string name="ageRequis">Age is required</string>
     <string name="ecoleRequis">School name is required</string>
-    <string name="programmeRequis">Program is required</string>
+    <string name="programmeRequis">Program name is required</string>
     <string name="emailRequis">Email is required</string>
     <string name="emailNonValide">Email is not valid</string>
     <string name="motDePasseRequis">"Your password should have :\n
                     - At least six characters\n
-                    - At least one number\n
+                    - At least one number \n
                     - At least one special character\n
                     - No space</string>
-    <string name="verificationEmail">The account is created!!!! All you have to do is check your email in your inbox.</string>
-    <string name="bouttonRetourApresVerification">Back to Home</string>
-    <string name="UtilisateurEnregistrer">The user has been registered</string>
+    <string name="verificationEmail">The account has been created!!!! All you have to do is check your email in your inbox.</string>
+    <string name="bouttonRetourApresVerification">Back to home</string>
+    <string name="UtilisateurEnregistrer">User has been registered</string>
     <string name="UtilisateurNonEnregistrer">User has not been registered</string>
     <string name="resetButton">Reset</string>
     <string name="resetTextView">Reset password</string>
-    <string name="resetEditText">Enter your email</string>
-    <string name="timer">timer</string>
-    <string name="calculatrice_cote_r">calculator_cote_r</string>
+    <string name="resetEditText">Enter your Email</string>
+    <string name="timer">Timer</string>
+    <string name="calculatrice_cote_r">calculatrice_cote_r</string>
     <string name="echange_de_livre">echange_de_livre</string>
     <string name="profil_view">profil_view</string>
     <string name="universite">universite</string>
@@ -50,6 +50,7 @@
     <string name="nom_complet_profil">Full name</string>
     <string name="ajouter_cote_r">Add Cote R</string>
 
+    <string name="defintion_cote_r">La cote de rendement au collégial (CRC) est une méthode d’évaluation du dossier scolaire utilisée par la plupart des universités québécoises en vue de gérer l’admission dans certains programmes. Chaque cours possède sa cote R et l’ensemble des cours suivis donne une cote R « générale ». Il est donc important de prendre les études collégiales au sérieux dès le début de la première session.</string>
     <string-array name="coursTest">
         <item>Physique</item>
         <item>Math</item>

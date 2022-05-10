@@ -1,38 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/turquoise"
+    tools:context=".AcceuilleActivity">
 
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/turquoise"
-android:gravity="center"
+    <Button
+        android:id="@+id/francais1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/ic_langue_francais" />
 
-tools:context=".AcceuilleActivity">
-
+    <Button
+        android:id="@+id/anglais1"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/ic_langue_anglettere" />
 
     <TextView
         android:id="@+id/textViewBienvenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:layout_marginTop="100dp"
         android:text="@string/bienvenue"
         android:textAlignment="center"
         android:textColor="@color/gris"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-<Button
-    android:id="@+id/buttonAllerSenregistrer"
-    android:layout_width="300dp"
-    android:layout_height="100dp"
-    android:layout_below="@+id/textViewBienvenu"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="100dp"
-    android:background="@drawable/button"
-    android:text="@string/s_enregistrer"
-    android:textAllCaps="false"
-    android:textColor="#FFFFFF"
-    android:textSize="30sp" />
+    <Button
+        android:id="@+id/buttonAllerSenregistrer"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textViewBienvenu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button"
+        android:text="@string/s_enregistrer"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/buttonAllerSeConnecter"
@@ -47,42 +61,45 @@ tools:context=".AcceuilleActivity">
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
+    <!--
+       <Button
+           android:id="@+id/buttonLangueFrancais"
+           android:layout_width="221dp"
+           android:layout_height="97dp"
+           android:layout_below="@+id/buttonAllerSenregistrer"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentEnd="true"
+           android:layout_alignParentBottom="true"
 
-    <Button
-        android:id="@+id/buttonLangueFrancais"
-        android:layout_width="221dp"
-        android:layout_height="97dp"
-        android:layout_below="@+id/buttonAllerSenregistrer"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+           android:layout_marginStart="89dp"
+           android:layout_marginTop="184dp"
+           android:layout_marginEnd="101dp"
+           android:layout_marginBottom="173dp"
+           android:background="@drawable/button"
+           android:text="francais"
+           android:textAllCaps="false"
+           android:textColor="#FFFFFF"
+           android:textSize="30sp" />
+   -->
 
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="173dp"
-        android:background="@drawable/button"
-        android:text="francais"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp" />
+    <!--
+        <Button
+            android:id="@+id/buttonLangueAnglais"
+            android:layout_width="221dp"
+            android:layout_height="97dp"
+            android:layout_below="@+id/buttonAllerSenregistrer"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
 
-    <Button
-        android:id="@+id/buttonLangueAnglais"
-        android:layout_width="221dp"
-        android:layout_height="97dp"
-        android:layout_below="@+id/buttonAllerSenregistrer"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="307dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/button"
-        android:text="anglais"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp" />
+            android:layout_marginStart="94dp"
+            android:layout_marginTop="307dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/button"
+            android:text="anglais"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+            -->
 </RelativeLayout>
