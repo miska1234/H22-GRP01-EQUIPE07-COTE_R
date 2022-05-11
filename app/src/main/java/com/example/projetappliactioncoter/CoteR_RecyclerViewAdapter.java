@@ -10,6 +10,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class CoteR_RecyclerViewAdapter extends RecyclerView.Adapter<CoteR_RecyclerViewAdapter.MyViewHolder> {
@@ -18,9 +23,13 @@ public class CoteR_RecyclerViewAdapter extends RecyclerView.Adapter<CoteR_Recycl
     ArrayList<CoteRModel> coteRModels;
     private OnItemClickListener mListener;
 
+
     public CoteR_RecyclerViewAdapter(Context context, ArrayList<CoteRModel> coteRModels){
         this.context = context;
         this.coteRModels = coteRModels;
+
+
+
     }
 
 

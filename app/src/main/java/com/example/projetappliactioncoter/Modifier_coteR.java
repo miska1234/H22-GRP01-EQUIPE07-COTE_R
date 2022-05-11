@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -23,30 +22,35 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
+public class Modifier_coteR extends Fragment {
 
     EditText matiere, note, moyenne, ecartType, moyenneSecondaire, nbr_unites;
     Button ajouter_modierButton;
     FirebaseUser user;
     DatabaseReference reference;
     String userID;
+    int position;
+
+    public Modifier_coteR(int position){
+        this.position = position;
+    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_calculatricecoter_realcalcul, container, false);
+        View view = inflater.inflate(R.layout.activity_modifier_cote_r, container, false);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        matiere = view.findViewById(R.id.matiere_calculatrice_cote_r);
-        note = view.findViewById(R.id.note_calculatrice_cote_r);
-        moyenne = view.findViewById(R.id.moyenne_calculatrice_cote_r);
-        ecartType = view.findViewById(R.id.ecart_type_calculatrice_cote_r);
-        moyenneSecondaire = view.findViewById(R.id.moyenne_secondaire_calculatrice_cote_r);
-        ajouter_modierButton = view.findViewById(R.id.ajouterModifiercoter);
-        nbr_unites = view.findViewById(R.id.nbr_unites_calculatrice_cote_r);
+        matiere = view.findViewById(R.id.matiere_modifier_cote_r);
+        note = view.findViewById(R.id.note_modifier_cote_r);
+        moyenne = view.findViewById(R.id.moyenne_modifier_cote_r);
+        ecartType = view.findViewById(R.id.ecart_type_modifier_cote_r);
+        moyenneSecondaire = view.findViewById(R.id.moyenne_secondaire_modifier_cote_r);
+        ajouter_modierButton = view.findViewById(R.id.Modifiercoter);
+        nbr_unites = view.findViewById(R.id.nbr_unites_modifier_cote_r);
 
         ajouter_modierButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +143,7 @@ public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
                 if(userProfil != null){
                     ArrayList<CoteR> coteRArrayList = userProfil.coteRArraylist;
 
-                    coteRArrayList.add(new CoteR(matiere,  Double.parseDouble(note), Double.parseDouble(moyenne), Double.parseDouble(ecartType), Double.parseDouble(moyenneSecondaire), Double.parseDouble(nbrUnites)));
+                    coteRArrayList.set(position + 1, new CoteR(matiere,  Double.parseDouble(note), Double.parseDouble(moyenne), Double.parseDouble(ecartType), Double.parseDouble(moyenneSecondaire), Double.parseDouble(nbrUnites)));
                     reference.child(userID).child("coteRArraylist").setValue(coteRArrayList);
                 }
 
@@ -154,7 +158,7 @@ public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
         Fragment fragmentCalcCoteR = new CalculatriceCoteRFragment();
         FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
         fm.replace(R.id.fragment_container, fragmentCalcCoteR).commit();
-        Toast.makeText(getContext(), "Cote R rajoutée!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getContext(), "Cote R modifiée!!", Toast.LENGTH_LONG).show();
 
 
 

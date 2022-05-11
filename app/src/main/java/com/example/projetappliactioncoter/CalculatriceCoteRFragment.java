@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ import java.util.zip.Inflater;
 public class CalculatriceCoteRFragment extends Fragment{
 
     ArrayList<CoteRModel> coteRModels = new ArrayList<>();
+    SwipeRefreshLayout swipeRefreshLayout;
     Button buttonAjouterCoteR;
     FirebaseUser user;
     DatabaseReference reference;
@@ -47,6 +49,15 @@ public class CalculatriceCoteRFragment extends Fragment{
 
 
         buttonAjouterCoteR = view.findViewById(R.id.ajouterCoteR);
+        swipeRefreshLayout = view.findViewById(R.id.swipper_layout);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                setUpCoteRModels(view);
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
         buttonAjouterCoteR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,17 +89,22 @@ public class CalculatriceCoteRFragment extends Fragment{
                 if(userProfil != null){
                     ArrayList<CoteR> coteRArrayList = userProfil.coteRArraylist;
 
-                    if(!coteRArrayList.get(0).matiere.equals("Effacable") && coteRArrayList.size() != 1) {
-                        coteRModels.clear();
-                        for (int i = 0; i < coteRArrayList.size(); i++) {
-                            coteRModels.add(new CoteRModel(coteRArrayList.get(i).matiere,
-                                    String.valueOf(CoteR.calculCoteR(coteRArrayList.get(i).note, coteRArrayList.get(i).moyenne,
-                                            coteRArrayList.get(i).ecartType, coteRArrayList.get(i).moyenneAuSecondaire))));
-                        }
+                    if(coteRArrayList.size() != 1){
+
+
+                            coteRModels.clear();
+                            for (int i = 1; i < coteRArrayList.size(); i++) {
+                                coteRModels.add(new CoteRModel(coteRArrayList.get(i).matiere,
+                                        String.valueOf(CoteR.calculCoteR(coteRArrayList.get(i).note, coteRArrayList.get(i).moyenne,
+                                                coteRArrayList.get(i).ecartType, coteRArrayList.get(i).moyenneAuSecondaire))));
+                            }
+
                     }
+
                 }
 
                 //TODO il y a une erreur : E/RecyclerView: No adapter attached; skipping layout -> verify c koi l erreur
+                //TODO c la k il y a les on Edit Click
                 CoteR_RecyclerViewAdapter coteR_recyclerViewAdapter = new CoteR_RecyclerViewAdapter(getContext(), coteRModels);
                 RecyclerView recyclerView = view.findViewById(R.id.recyclerview_cote_r);
                 recyclerView.setAdapter(coteR_recyclerViewAdapter);
@@ -97,14 +113,35 @@ public class CalculatriceCoteRFragment extends Fragment{
                 coteR_recyclerViewAdapter.setOnItemListener(new CoteR_RecyclerViewAdapter.OnItemClickListener() {
                     @Override
                     public void onEditClick(int position) {
-                        coteRModels.get(position).setCoteR("Bot");
-                        coteR_recyclerViewAdapter.notifyItemChanged(position);
+                        Fragment fragmentModifierCoteR = new Modifier_coteR(position);
+                        FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
+                        fm.replace(R.id.fragment_container, fragmentModifierCoteR).commit();
                     }
 
                     @Override
                     public void onDeleteClick(int position) {
                         coteRModels.remove(position);
                         coteR_recyclerViewAdapter.notifyItemRemoved(position);
+                        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                Utilisateur userProfil = snapshot.getValue(Utilisateur.class);
+
+                                if(userProfil != null){
+                                    ArrayList<CoteR> coteRArrayList = userProfil.coteRArraylist;
+                                    coteRArrayList.remove(position + 1);
+
+                                    reference.child(userID).child("coteRArraylist").setValue(coteRArrayList);
+                                }
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                                Toast.makeText(getContext(), "Il y a eu une erreur!", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                     }
                 });
             }
@@ -114,14 +151,7 @@ public class CalculatriceCoteRFragment extends Fragment{
                 Toast.makeText(getContext(), "Il y a eu une erreur!", Toast.LENGTH_SHORT).show();
             }
         });
-        /*
-        String[] matiereNom = getResources().getStringArray(R.array.coursTest);
-        String[] coteR = getResources().getStringArray(R.array.Cote_r);
 
-        for(int i = 0 ;  i < matiereNom.length; i++){
-            coteRModels.add(new CoteRModel(matiereNom[i], coteR[i]));
-        }
-         */
 
     }
 

@@ -51,7 +51,6 @@ public class ConnectionActivity extends AppCompatActivity implements View.OnClic
                 seConnecter();
                 break;
             case R.id.textViewMotPasseOblier:
-                //TODO faire le activity de motdepasseoublier
 
                 Intent switchToReset = new Intent(ConnectionActivity.this, ResetPassword.class);
                 startActivity(switchToReset);

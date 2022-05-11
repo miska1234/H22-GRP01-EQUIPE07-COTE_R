@@ -23,20 +23,27 @@ public class CoteR {
     public static double calculCoteR(double note, double moyenne, double ecartType, double moyenneAuSecondaire){
         double Z = (note-moyenne)/ecartType;
         double IFG = (moyenneAuSecondaire-75)/14;
-        return (Z+IFG+5)*5;
+        return (double)(Math.round((Z+IFG+5)*5*1000)/1000.0);
     }
 
     public static double calculCoteRFinal(ArrayList<CoteR> coteRArrayList){
         double coteRFinal = 0;
         double nbrUnitestotal = 0;
+        double cpt1 = 0;
+        double cpt2 = 0;
 
         for(CoteR coteR : coteRArrayList){
-            nbrUnitestotal+= coteR.nbrUnite;
+            if(cpt1 != 0){
+                nbrUnitestotal+= coteR.nbrUnite;
+            }
+            cpt1++;
         }
 
         for(CoteR coteR : coteRArrayList){
-
-            coteRFinal += ((coteR.nbrUnite/nbrUnitestotal) * calculCoteR(coteR.note, coteR.moyenne, coteR.ecartType, coteR.moyenneAuSecondaire));
+            if(cpt2 != 0) {
+                coteRFinal += ((coteR.nbrUnite / nbrUnitestotal) * calculCoteR(coteR.note, coteR.moyenne, coteR.ecartType, coteR.moyenneAuSecondaire));
+            }
+            cpt2++;
         }
 
 

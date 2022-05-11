@@ -105,11 +105,14 @@ public class ProfilFragment extends Fragment {
                     ageTextView.setText(age + " ans");
                     ecoleTextView.setText(ecole);
                     programmeTextView.setText(programme);
-                    if(userProfil.coteRArraylist.get(0).matiere.equals("Effacable")){
+
+                    if(userProfil.coteRArraylist.get(0).matiere.equals("Effacable") && userProfil.coteRArraylist.size() == 1){
                         coteRTextView.setText("Pas de Cote R encore");
                     } else {
                         coteRTextView.setText(String.valueOf(CoteR.calculCoteRFinal(userProfil.coteRArraylist)));
                     }
+
+
 
 
 
