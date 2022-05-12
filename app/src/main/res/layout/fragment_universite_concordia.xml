@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/turquoise"
+    android:orientation="vertical">
+
+    "<!--" Sert a juste distinguer le relative layout pr pas touch
+     les boutton menu et logout"-->"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Côte R minimale rquise"
+            android:textSize="32sp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:id="@+id/cardViewUdem">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="15dp"
+                        android:text="
+Baccalaureate in Administration 27 math 26.50\n
+Baccalaureate in Commerce 27 math 26.50\n
+Faculté des Arts et sciences\n
+Anthropologie 22,00\n
+Anthropologie et sociologie  22,00\n
+Biochimie (spécialisation) 25,00\n
+Biochimie (majeure)  23,00\n
+Biologie  26,00\n
+Biologie cellulaire et moléculaire  26,00\n
+Chimie (spécialisation)  25,00\n
+Chimie (majeure) 23,00\n
+Communication* 25,00\n
+Écologie 26,00\n
+Économie 23,00\n
+Éducation préscolaire et ens.primaire* 26,00\n
+Enseignement de l’anglais, langue seconde* 25,00\n
+Études en affaires publiques et communautaires et
+analyse des politiques* 24,00\n
+Finance mathématique et computationnelle 29,00\n
+ CRC math 29,00\n
+Géographie environnementale 23,00\n
+Journalisme*  22,00\n
+Mathématiques pures et appliquées 24,00\n
+ CRC math   24,00\n
+Mathématiques actuarielles 28,00\n
+ CRC math 30,00\n
+Mathématiques actuarielles/finance* 30,00\n
+ CRC math 30,00\n
+Sciences de l’exercice 27,00\n
+ CRC math/sciences 24,00\n
+Psychologie (option behavioural neuroscience) 28,00\n
+Psychologie 28,00\n
+Sociologie 22,00\n
+Sciences de l’environnement 25,00\n
+ CRC math 24,00\n
+Statistiques 24,00\n
+ CRC math 24,00\n
+ \n
+* Conditions départementales additionnelles requises\n
+Faculté de génie et informatique\n
+Génie aérospatial 30 /math 27 / phys. 27\n
+Génie du bâtiment 24 / math 23 / phys. 22\n
+Génie civil24 / math 23 / phys. 22\n
+Génie électrique 24 / math 23 / phys. 22\n
+Génie industriel 24 / math 24 / phys. 23\n
+Génie informatique 25 / math 23 / phys. 22\n
+Génie logiciel 28 / math 26 / phys. 24\n
+Génie mécanique  25 / math 23 / phys. 22\n
+Programme général en informatique 28 / math 26\n
+"/>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

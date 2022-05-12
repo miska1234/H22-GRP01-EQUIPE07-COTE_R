@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/turquoise"
+    android:orientation="vertical">
+
+    "<!--" Sert a juste distinguer le relative layout pr pas touch
+     les boutton menu et logout"-->"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Côte R minimum admis"
+            android:textSize="32sp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:id="@+id/cardViewUdem">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="15dp"
+                        android:text="Adaptation scolaire et sociale 20,00\n
+Administration des affaires  24,50\n
+Communication – cheminement régulier  20,00\n
+Communication- rédaction 20,00\n
+Communication - communication  23,70\n
+Communication -marketing*  24,50\n
+Doctorat en médecine – (MEM)34,693\n
+Droit (régulier) 30,10\n
+Droit (coopératif) 31,50\n
+Droit- common law 30,10\n
+Droit- MBA 31,30\n
+Droit – sciences de la vie 30,10\n
+Économie  24,00\n
+Ens.éducation physique/santé 24,20\n
+Ens.en anglais langue seconde 20,00\n
+Études environnement (Sc.hum.)  25,40\n
+Études envrionnement (Sc. nat.) 25,30\n
+Enseignement secondaire\n
+ Français langue d’enseignement 20,00\n
+ Mathématiques  25,40\n
+ Sciences et technologie 23,20\n
+ Univers social  23,10\n
+Ens.préscolaire et primaire 22,30\n
+Génie civil 25,80\n
+Génie bâtiment 26.00\n
+Génie robotique 28.40\n
+Génie électrique 24,00\n
+Génie informatique 24.70\n
+Génie chimique 22,40\n
+Génie mécanique 27,20\n
+Génie biotechnologique23,70\n
+Géomatique app à l’environnement 22,70\n
+Kinésiologie 24,60\n
+Ergothérapie 31,00\n
+Physiothérapie 32,10\n
+Pharmacologie 23,40\n
+Psychoéducation 26,20\n
+Psychologie (bac) 28,60\n
+Sciences infirmières INITIALE\n
+ Sherbrooke 27,70\n
+ Longueuil 25,70\n
+Service social 27,60\n
+Traduction professionnelle  20,00"/>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

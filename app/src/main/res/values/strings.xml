@@ -39,6 +39,8 @@
     <string name="resetButton">Réinitialiser</string>
     <string name="resetTextView">Réinitialisation du mot de passe</string>
     <string name="resetEditText">Entrée votre email</string>
+
+    <!-- TODO Changer le nom des bhy dans la bar de navigation pcq kand t appuie longtemps dessus, ca montre le nom-->
     <string name="timer">timer</string>
     <string name="calculatrice_cote_r">calculatrice_cote_r</string>
     <string name="echange_de_livre">echange_de_livre</string>
@@ -50,23 +52,15 @@
     <string name="nom_complet_profil">Nom complet</string>
     <string name="ajouter_cote_r">Ajouter Cote R</string>
 
-    <string-array name="coursTest">
-        <item>Physique</item>
-        <item>Math</item>
-        <item>Français</item>
-        <item>Philo</item>
-        <item>Éduc</item>
-        <item>Art</item>
-
-    </string-array>
-
-    <string-array name="Cote_r">
-        <item>Cote r : 38.5</item>
-        <item>Cote r : 27</item>
-        <item>Cote r : 35</item>
-        <item>Cote r : 32</item>
-        <item>Cote r : 33</item>
-        <item>Cote r : 29</item>
+    <!-- Shrink le nombre d uni pcq sinn trop long-->
+    <!-- TODO Pour le futur rajouter plus d univeritez-->
+    <string-array name="Univesités">
+        <item>Université de Montréal</item>
+        <item>École Polytechnique de Montréal</item>
+        <item>Université Laval (à Québec)</item>
+        <item>Université de Sherbrooke</item>
+        <item>Université Concordia</item>
+        <item>Université McGill</item>
 
     </string-array>
 
