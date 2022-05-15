@@ -9,6 +9,8 @@
     tools:context=".EnregistrementV2Activity">
 
 
+
+
     <TextView
         android:id="@+id/textViewEnregistrement"
         android:layout_width="wrap_content"
