@@ -71,6 +71,7 @@
             android:textSize="18sp" />
 
 
+
         <EditText
             android:id="@+id/moyenne_secondaire_calculatrice_cote_r"
             android:layout_width="200dp"

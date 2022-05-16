@@ -175,7 +175,6 @@
                 android:layout_alignStart="@+id/profil_ecole_mini_icon"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
-                android:hint="Cote R"
                 android:textSize="18sp" />
 
 
