@@ -45,28 +45,36 @@ public class MenuV2Activity extends AppCompatActivity  {
 
         LanguageManager languageManager = new LanguageManager(this);
 
+
+
+
         spinnerLangue.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 LangueModelClass language = (LangueModelClass) adapterView.getItemAtPosition(i);
-                String langue = language.getNomPays();
 
-                /*
-                if(langue.equals("Français")){
-                    languageManager.updateResource("fr");
 
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
-                }else if(langue.equals("English")){
-                    languageManager.updateResource("en");
+                switch (i){
+                    case 0:
+                        break;
+                    case 1:
+                        languageManager.updateResource("fr");
 
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
+                        Intent intent = getIntent();
+                        finish();
+                        startActivity(intent);
+
+                        break;
+                    case 2:
+                        languageManager.updateResource("en");
+
+                        Intent intent2 = getIntent();
+                        finish();
+                        startActivity(intent2);
+                        break;
                 }
 
-                 */
+
             }
 
             @Override
@@ -74,6 +82,7 @@ public class MenuV2Activity extends AppCompatActivity  {
 
             }
         });
+
 
         logoutTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +102,7 @@ public class MenuV2Activity extends AppCompatActivity  {
 
     public void initialiserList(){
         langueList = new ArrayList<>();
+        langueList.add(new LangueModelClass("", R.drawable.ic_menu));
         langueList.add(new LangueModelClass("Français", R.drawable.ic_france_flag));
         langueList.add(new LangueModelClass("English", R.drawable.ic_angleterre_flag));
     }
@@ -126,6 +136,7 @@ public class MenuV2Activity extends AppCompatActivity  {
             }
         });
     }
+
 
 
 

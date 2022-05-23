@@ -12,12 +12,13 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class EncouragementFragment extends Fragment {
 
-    LinearLayout linearLayoutEncouragement;
-    TextView textViewEncouragement;
-    ArrayList<String> listeDeCitation;
+    public LinearLayout linearLayoutEncouragement;
+    public TextView textViewEncouragement, textViewMotivation;
+    public ArrayList<String> listeDeCitation;
 
     public EncouragementFragment(){
         setListeDeCitation();
@@ -29,6 +30,15 @@ public class EncouragementFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_encouragement, container, false);
         linearLayoutEncouragement = view.findViewById(R.id.layout_motivation_click);
         textViewEncouragement = view.findViewById(R.id.texte_encouragement);
+        textViewMotivation = view.findViewById(R.id.motivationnnn);
+
+
+
+        if(textViewMotivation.getText().equals("Motivation!!!")){
+            setListeDeCitationAnglais();
+        } else {
+            setListeDeCitation();
+        }
 
         linearLayoutEncouragement.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +80,37 @@ public class EncouragementFragment extends Fragment {
 
         listeDeCitation.add("'La pensée positive vous permettra de tout faire d’une meilleure façon que la pensée négative.'\n\n -Zig Ziglar");
         listeDeCitation.add("'Je peux accepter l’échec, tout le monde échoue dans quelque chose. Mais je ne peux accepter de ne pas essayer.'\n\n -Michael Jordan");
+    }
+
+    public void setListeDeCitationAnglais(){
+        listeDeCitation = new ArrayList<>();
+        listeDeCitation.add("'In the realm of ideas, everything depends on enthusiasm. " +
+                "In the real world, it's all about perseverance.'\n\n -Johann Wolfgang von Goethe");
+        listeDeCitation.add("'Success is walking from failure to failure while staying motivated.'\n\n -Winston Churchill");
+        listeDeCitation.add("'The only place success comes before hard work is in the dictionary.'\n\n -Vidal Sassoon");
+        listeDeCitation.add("'Tell everyone what you want to do and someone will help you accomplish it.'\n\n -W. Clement Stone");
+        listeDeCitation.add("'It doesn't matter who you are or have been, you can be whoever you want.'\n\n -W. Clement Stone");
+        listeDeCitation.add("'In 20 years, you will be more disappointed by the things you didn't do than by the ones you did." +
+                "So cast off, get out of port, catch the trade winds by the sails. Explore. Dream. Find out.'\n\n -Mark Twain");
+        listeDeCitation.add("'Start now, not tomorrow. Tomorrow is a loser's excuse.'\n\n -Andrew Fashion");
+        listeDeCitation.add("'Yesterday's home runs don't win today's games.'\n\n -Babe Ruth");
+        listeDeCitation.add("'I did not fail. I just found 10,000 ways not to make it.'\n\n -Thomas Edison");
+        listeDeCitation.add("'You must either modify your dreams or improve your skills.'\n\n -Jim Rohn");
+
+        listeDeCitation.add("'The best way to predict the future is to create it.'\n\n -Peter Drucker");
+        listeDeCitation.add("'Stay away from people who try to diminish your ambitions. \"Small\" people always do this, but \"big\" people" +
+                "they make you feel like you can be awesome too.'\n\n -Mark Twain");
+        listeDeCitation.add("'Every good achievement, big or small, has its periods of drudgery and triumphs; a beginning, a fight and a victory.'\n\n -Mahatma Gandhi");
+        listeDeCitation.add("'Not a single person whose exploits and accomplishments are remembered has lived an easy life.'\n\n -Ryan P. Allis");
+        listeDeCitation.add("'The most valuable thing you can do is make a mistake. You can't learn anything by being perfect.'\n\n -Adam Osborne");
+        listeDeCitation.add("'Logic will get you from A to B. Imagination will get you everywhere.'\n\n -Albert Einstein");
+        listeDeCitation.add("'If everything is under control, you are not going fast enough.'\n\n -Mario Andretti");
+        listeDeCitation.add("'Make your decisions based on where you are going, not where you are.'\n\n -James Arthur Ray");
+        listeDeCitation.add("'The value of a man is not greater than the value of his ambitions.'\n\n -Marcus Aurelius Antoninus");
+        listeDeCitation.add("'If you can't do big things, do small things in a big way.'\n\n -Napoleon Hill");
+
+        listeDeCitation.add("'Positive thinking will allow you to do everything better than negative thinking.'\n\n -Zig Ziglar");
+        listeDeCitation.add("'I can accept failure, everyone fails at something. But I can't accept not trying.'\n\n -Michael Jordan");
     }
 
     public void changerDeCitationEncouragement(){
