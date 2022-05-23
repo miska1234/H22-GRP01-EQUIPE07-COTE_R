@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/layout_motivation_click"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/turquoise"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="100">
 
-    "<!--" Sert a juste distinguer le relative layout pr pas touch
-     les boutton menu et logout"-->"
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
@@ -21,21 +22,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/c_te_r_minimale_requise_concordia"
+            android:text="@string/motivation"
             android:textSize="32sp" />
 
     </RelativeLayout>
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="480dp"
-        android:scrollbars="none">
 
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="100">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -59,8 +65,14 @@
                         android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/texte_encouragement"
                         android:lineSpacingExtra="15dp"
-                        android:text="@string/cote_r_concordia"/>
+                        android:layout_marginTop="20dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:fontFamily="cursive"
+                        android:text="@string/clickez_sur_l_cran_pour_vous_motiver"
+                        android:layout_centerInParent="true"/>
 
                 </RelativeLayout>
 
@@ -68,8 +80,22 @@
 
         </RelativeLayout>
 
+</RelativeLayout>
 
-    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/source_http_unimag_ca"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
 
 
 

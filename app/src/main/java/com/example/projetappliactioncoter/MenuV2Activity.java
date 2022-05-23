@@ -8,12 +8,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Spinner;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.ArrayList;
 
 
 public class MenuV2Activity extends AppCompatActivity  {
@@ -21,15 +24,57 @@ public class MenuV2Activity extends AppCompatActivity  {
     private BottomNavigationView bottomNavigationView;
     private ImageView logoutTextView;
 
+    private ArrayList<LangueModelClass> langueList;
+    private LangueAdapter langueAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_v2);
 
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         logoutTextView = (ImageView) findViewById(R.id.logoutButton);
 
-        //TODO setOnClickListener pour le menubutton
+        //SETTING ADDAPTERZ
+        initialiserList();
+        Spinner spinnerLangue = findViewById(R.id.spinner_langue);
+
+        langueAdapter = new LangueAdapter(this, langueList);
+        spinnerLangue.setAdapter(langueAdapter);
+
+        LanguageManager languageManager = new LanguageManager(this);
+
+        spinnerLangue.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                LangueModelClass language = (LangueModelClass) adapterView.getItemAtPosition(i);
+                String langue = language.getNomPays();
+
+                /*
+                if(langue.equals("Français")){
+                    languageManager.updateResource("fr");
+
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }else if(langue.equals("English")){
+                    languageManager.updateResource("en");
+
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
+
+                 */
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         logoutTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +89,12 @@ public class MenuV2Activity extends AppCompatActivity  {
 
 
 
+    }
+
+    public void initialiserList(){
+        langueList = new ArrayList<>();
+        langueList.add(new LangueModelClass("Français", R.drawable.ic_france_flag));
+        langueList.add(new LangueModelClass("English", R.drawable.ic_angleterre_flag));
     }
 
     public void navigationViewItemSelect(){
@@ -66,7 +117,7 @@ public class MenuV2Activity extends AppCompatActivity  {
                         fragment = new UniversiteFragment();
                         break;
                     case R.id.timer:
-                        fragment = new PomodoroFragment();
+                        fragment = new EncouragementFragment();
                         break;
 
                 }

@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Côte R minimale requise"
+            android:text="@string/c_te_r_minimale_requise_poly"
             android:textSize="32sp" />
 
     </RelativeLayout>
@@ -60,11 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:lineSpacingExtra="15dp"
-                        android:text="Programme de génie, adm. automatique  27.000\n
-Génie aérospatial 32,800\n
-Génie biomédical  32,800\n
-Génie informatique 28,000\n
-Génie logiciel 28,000"/>
+                        android:text="@string/cote_r_poly"/>
 
                 </RelativeLayout>
 

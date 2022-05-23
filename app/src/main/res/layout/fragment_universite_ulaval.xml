@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Côte R minimale requise"
+            android:text="@string/c_te_r_minimale_requise_ulaval"
             android:textSize="32sp" />
 
     </RelativeLayout>
@@ -60,36 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:lineSpacingExtra="15dp"
-                        android:text="Administration des affaires 22,000\n
-Affaires publiques et relations internat 28,503\n
-Architecture 31,510\n
-Communication publique 22,000\n
-Criminologie 29,506\n
-Droit 30.007\n
-Éducation au préscolaire et ens.primaire 22,000\n
-Enseignement de la musique Audition\n
-Enseignement de l’anglais, langue seconde Test\n
-Ens.de l’éducation phys. et à la santé 25,025\n
-Ens.du français, langue seconde 22,866\n
-Enseignement secondaire (cote minimale exigée)\n
- Français 22,000\n
- Mathématiques 22,000\n
- Sciences et technologie 22,000\n
- Univers social (histoire et géographie) 22,000\n
- Univers social (hist, éthique et cul.rel) 22,000\n
-Ergothérapie 32,074\n
-Intervention sportive 22,588\n
-Kinésiologie  24,714\n
-Médecine Min 33,000\n
-Médecine dentaire 34.214\n
-Nutrition  31,625\n
-Psychoéducation  25,500\n
-Pharmacie 33,047\n
-Physiothérapie 30,711 (en date 15 mai 2021)\n
-Psychologie 27,802\n
-Sciences biomédicales  27,500\n
-Sciences infirmières27,085 (en date du 15 mai 2021)\n
-Travail social 26,815"/>
+                        android:text="@string/cote_r_ulaval"/>
 
 
                 </RelativeLayout>

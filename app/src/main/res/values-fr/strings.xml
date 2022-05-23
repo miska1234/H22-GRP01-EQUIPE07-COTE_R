@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ProjetAppliactionCoteR</string>
 
@@ -98,8 +99,4 @@
         <item>Université McGill</item>
 
     </string-array>
-
-
-
-
 </resources>

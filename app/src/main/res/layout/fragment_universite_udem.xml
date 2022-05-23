@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Côte R minimale requise"
+            android:text="@string/c_te_r_minimale_requise_udem"
             android:textSize="32sp" />
 
     </RelativeLayout>
@@ -60,68 +60,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:lineSpacingExtra="15dp"
-                            android:text="Architecture 31,569\n
-Architecture de paysage 26,816\n
-Biochimie et médecine moléculaire  26,314\n
-Biologie 28.785\n
-Cinéma (B)  25,013\n
-Communication (Sciences de la) 24,047\n
-Communication et politique  23,000\n
-Criminologie (B) 29,650\n
-Criminologie (Mj) 24,070\n
-Criminologie (Mn)  25,098\n
-Design d’intérieur 29,652\n
-Design industriel 24,758\n
-Droit (B) 31,632\n
-Éducation préscolaire et ens. Primaire(Mtl)23,000\n
-Campus Laval 23,000\n
-Ens.de l’éducation physique et santé 25,017\n
-Ens.de l’éthique et cultures religieuses 23,000\n
-Ens.de l’univers social au secondaire 24,500\n
-Ens. des mathématiques au secondaire 24,500\n
-Ens.des sciences et technologies 24,000\n
-Ens. du français au secondaire  24,000\n
-Ens. du français langue seconde 23,000\n
-Ens. adaptation scolaire\n
- Campus Montréal  23,000\n
- Campus Laval 23,000\n
-Ergothérapie 31,516\n
-Études internationales 27,851\n
-Informatique 25.000\n
-Kinésiologie  27,940\n
-Médecine (entrevue) min. 33,047\n
-Médecine dentaire 34,113\n
-Médecine vétérinaire 33,808\n
-Microbiologie et immunologie 27,256\n
-Musique audition\n
-Neurosciences 31,255\n
-Neurosciences cognitive 28,055\n
-Nutrition 31,804\n
-Optométrie 34,750\n
-Pharmacie 34,503\n
-Physiothérapie 33,917\n
-Physique et informatique 25,000\n
-Psychoéducation (B) 27,798\n
-Psychoéducation (Mn) 27,017\n
-Psychologie (B)\n
- Campus Montréal 28,005\n
- Campus Laval 26,509\n
-Psychologie (Mj) 27,072\n
-Psychologie (Mn) 26,096\n
-Psychologie et sociologie 24,000\n
-Relations Industrielles (B)  22,048\n
-Sciences biomédicales 30,923\n
-Sciences biopharmaceutiques 27,643\n
-Sc. Infirmières\n
- Campus Montréal 25,419\n
- Campus Laval 26,000\n
-Science politique (B Mj, Mn)24,000\n
-Sécurité et études policières 26,855\n
-Traduction 22,000\n
-Travail social\n
- Campus Montréal 28,773\n
- Campus Laval 27,622\n
-Urbanisme 25,440"/>
+                            android:text="@string/cote_r_udem"/>
 
 
                     </RelativeLayout>

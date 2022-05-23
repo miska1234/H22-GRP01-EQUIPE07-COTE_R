@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Côte R minimale requise"
+            android:text="@string/c_te_r_minimale_requise_mcgill"
             android:textSize="32sp" />
 
     </RelativeLayout>
