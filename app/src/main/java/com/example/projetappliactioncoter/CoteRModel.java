@@ -4,6 +4,11 @@ public class CoteRModel {
     String matière;
     String coteR;
 
+    /**
+     * Constructeur de la classe modèle pour montrer la cote r dans le recycler view
+     * @param matière
+     * @param coteR
+     */
     public CoteRModel(String matière, String coteR) {
         this.matière = matière;
         this.coteR = coteR;

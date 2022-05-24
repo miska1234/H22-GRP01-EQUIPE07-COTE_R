@@ -32,28 +32,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreationProfilActivity"
-            android:exported="false" />
-        <activity
-            android:name=".UniversiteActivity"
-            android:exported="false" />
-        <activity
             android:name=".AcceuilleActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MenuActivity"
-            android:exported="false" />
-        <activity
             android:name=".ConnectionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CoteRActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EnregistrementActivity"
             android:exported="false" />
     </application>
 

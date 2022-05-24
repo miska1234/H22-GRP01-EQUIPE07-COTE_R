@@ -22,13 +22,14 @@
         android:layout_marginStart="360dp"
         android:layout_marginTop="20dp"/>
 
-    <ImageView
+    <!-- TODO spinner avc le flag de la france et de l angleterre -->
+    <Spinner
+        android:id="@+id/spinner_langue"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/menuButton"
-        android:background="@drawable/ic_menu"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_white_background"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

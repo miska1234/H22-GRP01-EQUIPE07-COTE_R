@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/turquoise"
+    android:orientation="vertical">
+
+    "<!--" Sert a juste distinguer le relative layout pr pas touch
+     les boutton menu et logout"-->"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/c_te_r_minimale_requise_mcgill"
+            android:textSize="32sp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:id="@+id/cardViewUdem">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="15dp"
+                        android:text="Sciences de l’agriculture et de l’environnement\n
+Tous les programmes (B.sc. Ag. Env. Sc) 25,500\n
+ CRC math/sciences 25,500\n
+Génie des bioressources 25,500\n
+ CRC math/sciences 25,500\n
+Conjoint (B.Sc. F.Sc. B.Sc Nutr.Sc) 28,200\n
+ CRC math/sciences 27,800\n
+Science alimentaire 25,700\n
+ CRC math/sciences 25,700\n
+Architecture 29,900\n
+ CRC math/sciences 30,200\n\n
+Remarque: La décision relative à votre admission tient
+également compte du classement de votre portfolio.\n\n
+Arts B.A. (sciences humaines) 27,000\n
+ CRC français 25,700\n
+Arts and sciences B.A/Sc  28,800\n
+ CRC français  25,700\n
+ CRC math/sciences 28.800\n
+École de Diététique et nutrition humaine\n
+Diététique 29,700\n
+ CRC math/sciences 30,000\n
+Nutrition. 28,200\n
+ CRC math/sciences 28,200\n
+Droit\n
+Cote R minimale convoquée à l’entrevue 32,263\n
+Cote R moyenne convoquée à l’entrevue34,549\n
+Sciences de l’éducation\n
+Ens.anglais langue seconde  24,800\n
+CRC français 25,000\n
+Ens.secondaire 25,200\n
+ CRC français 25,000\n
+Éducation physique 24,700\n
+ CRC français 25,000\n
+Ens.préscolaire et primaire 25,200\n
+ CRC français 25,000\n
+Kinésiologie 28,700\n
+ CRC math/sciences 28,300\n
+Génie\n
+Mécanique 30,600\n
+ CRC math/sciences 30,600\n
+Bio-ingénierie 34,500\n
+ CRC math/sciences 34,700\n
+Chimique 27,500\n
+ CRC math/sciences 27,500\n
+Civil  27,500\n
+ CRC math/sciences 27,500\n
+Minier 26,600\n
+ CRC math/sciences 26,600\n
+Des matériaux  27,400\n
+ CRC math/sciences 27,400\n
+Electrique 29,900\n
+ CRC math/sciences 29,900\n
+Du logiciel 32,100\n
+ CRC math/sciences 32,100\n
+De l’informatique  30,600\n
+ CRC math/sciences 30,700\n
+Gestion (B.com) 29,100\n
+ CRC math  29,100\n
+ CRC français 26,000\n
+Médecine*\n
+Cote R minimale convoquée à l’entrevue 34,500\n
+Cote R moyenne convoquée à l’entrevue  36,860\n
+Médecine dentaire*\n
+Cote R minimale convoquée à l’entrevue 35,034\n
+Cote R moyenne convoquée à l’entrevue  37,130\n
+Musique (admission 15 janvier)\n
+Composition (histoire, théorie) 80%\n
+Interprétation 75%\n
+Musique/Education 80%\n
+École de Physiothérapie et d’ergothérapie\n
+Ergothérapie 31,900\n
+ CRC math/sciences 32,000\n
+Physiothérapie 34,000\n
+ CRC math/sciences 34,000\n
+Sciences (B.Sc)\n
+Biologie, Biomedical et Life scences  29,900\n
+ CRC math/sciences 29,800\n
+Bio-physical-computational sciences  30,300\n
+ CRC math/sciences 30,300\n
+Physique, Earth, Math et Computer sciences 29,200\n
+ CRC math/sciences 29,100\n
+Neuroscience 34,800\n
+ CRC math/sciences 34,800\n
+École des Sciences infirmières\n
+B.Sc (détenteur d’un DEC en sciences) 28,700\n
+ CRC math/sciences 28,300\n
+École de Service social  26,000\n
+ CRC français 24,000\n
+* Le DEC doit être obtenu en 4 sessions."/>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

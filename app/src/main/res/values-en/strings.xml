@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProjetAppliactionCoteR</string>
+
+    <string name="mot_de_passe">Password</string>
+    <string name="email">Email</string>
+    <string name="enregistrement">Registering</string>
+    <string name="s_enregistrer">Sign up</string>
+    <string name="d_ja_un_compte">Already have an account</string>
+    <string name="todo">TODO</string>
+    <string name="se_connecter">Sign in</string>
+    <string name="mot_de_passe_oublier">Password forgotten</string>
+    <string name="profil">Profile</string>
+    <string name="ecole">School</string>
+    <string name="programme">Program</string>
+    <string name="age">Age</string>
+    <string name="sauvegarde">Save</string>
+    <string name="info_universite">University information</string>
+    <string name="info_cote_r">Cote R information</string>
+    <string name="nom">Name</string>
+    <string name="cote_r">Cote R</string>
+    <string name="nomComplet">Complete name</string>
+    <string name="nomCompletRequis">The complete name is required</string>
+    <string name="ageRequis">The age is required</string>
+    <string name="ecoleRequis">The school name is required</string>
+    <string name="programmeRequis">The program is required</string>
+    <string name="emailRequis">The email is required</string>
+    <string name="emailNonValide">The email is not valid</string>
+    <string name="motDePasseRequis">"Your password should have :\n
+                    - At least six character\n
+                    - At least one number\n
+                    - At least one special character\n
+                    - No space</string>
+    <string name="verificationEmail">The account has been created!!!! All you have to do now is check your email in your inbox.</string>
+    <string name="bouttonRetourApresVerification">Back to home</string>
+    <string name="UtilisateurEnregistrer">The user has been registered</string>
+    <string name="UtilisateurNonEnregistrer">User has not been registered</string>
+    <string name="resetButton">Reset</string>
+    <string name="resetTextView">Reset password</string>
+    <string name="resetEditText">Enter your email</string>
+
+    <!-- TODO Changer le nom des bhy dans la bar de navigation pcq kand t appuie longtemps dessus, ca montre le nom-->
+    <string name="timer">timer</string>
+    <string name="calculatrice_cote_r">Cote_r_calculator</string>
+    <string name="echange_de_livre">book_exchange</string>
+    <string name="profil_view">profil_view</string>
+    <string name="universite">universite</string>
+    <string name="title_activity_menu_v2">zioubankz</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titreProfilFragment">Profile</string>
+    <string name="nom_complet_profil">Complete name</string>
+    <string name="ajouter_cote_r">Add Cote R</string>
+    <string name="bienvenue">Welcome to the Cote R calculator application</string>
+    <string name="connection">Connection</string>
+    <string name="calculatrice_cote_r_v2">Cote R calculator :</string>
+    <string name="matiere">Subject</string>
+    <string name="note">Grade</string>
+    <string name="moyenne">Average</string>
+    <string name="ecart_type">Standard Deviation</string>
+    <string name="moyenne_au_secondaire">High school average</string>
+    <string name="nombre_d_unites">Number of units</string>
+    <string name="crire_75_si_vous_ne_savez_pas">**Write 75% if you don\'t know**</string>
+    <string name="modifier_cote_r">Modify Cote R</string>
+    <string name="cote_r_par_cours">Cote R per class :</string>
+    <string name="calculatrice_cote_r_real">Cote R calculator :</string>
+    <string name="matiere_real">Subject</string>
+    <string name="note_real">Grade</string>
+    <string name="moyenne_real">Average</string>
+    <string name="ecart_type_real">Standard Deviation</string>
+    <string name="moyenne_au_secondaire_real">High School average</string>
+    <string name="nombre_d_unites_real">Number of units</string>
+    <string name="crire_75_si_vous_ne_savez_pas_real">**Write 75% if you don\'t know**</string>
+    <string name="ajouter_cote_r_real">Add Cote R</string>
+    <string name="echange_de_livre_real">Book exchange</string>
+    <string name="motivation">Motivation!!!</string>
+    <string name="clickez_sur_l_cran_pour_vous_motiver">Click on the screen to motivate yourself</string>
+    <string name="source_http_unimag_ca">Source : http://unimag.ca</string>
+    <string name="cote_r_concordia">Baccalaureate in Administration 27 math 26.50\n Baccalaureate in Commerce 27 math 26.50\n Faculté des Arts et sciences\n Anthropologie 22,00\n Anthropologie et sociologie 22,00\n Biochimie (spécialisation) 25,00\n Biochimie (majeure) 23,00\n Biologie 26,00\n Biologie cellulaire et moléculaire 26,00\n Chimie (spécialisation) 25,00\n Chimie (majeure) 23,00\n Communication* 25,00\n Écologie 26,00\n Économie 23,00\n Éducation préscolaire et ens.primaire* 26,00\n Enseignement de l’anglais, langue seconde* 25,00\n Études en affaires publiques et communautaires et analyse des politiques* 24,00\n Finance mathématique et computationnelle 29,00\n CRC math 29,00\n Géographie environnementale 23,00\n Journalisme* 22,00\n Mathématiques pures et appliquées 24,00\n CRC math 24,00\n Mathématiques actuarielles 28,00\n CRC math 30,00\n Mathématiques actuarielles/finance* 30,00\n CRC math 30,00\n Sciences de l’exercice 27,00\n CRC math/sciences 24,00\n Psychologie (option behavioural neuroscience) 28,00\n Psychologie 28,00\n Sociologie 22,00\n Sciences de l’environnement 25,00\n CRC math 24,00\n Statistiques 24,00\n CRC math 24,00\n \n * Conditions départementales additionnelles requises\n Faculté de génie et informatique\n Génie aérospatial 30 /math 27 / phys. 27\n Génie du bâtiment 24 / math 23 / phys. 22\n Génie civil24 / math 23 / phys. 22\n Génie électrique 24 / math 23 / phys. 22\n Génie industriel 24 / math 24 / phys. 23\n Génie informatique 25 / math 23 / phys. 22\n Génie logiciel 28 / math 26 / phys. 24\n Génie mécanique 25 / math 23 / phys. 22\n Programme général en informatique 28 / math 26\n</string>
+    <string name="c_te_r_minimale_requise_mcgill">Minimum Cote R required</string>
+    <string name="c_te_r_minimale_requise_concordia">Minimum Cote R required</string>
+    <string name="c_te_r_minimale_requise_poly">Minimum Cote R required</string>
+    <string name="cote_r_poly">Programme de génie, adm. automatique 27.000\n Génie aérospatial 32,800\n Génie biomédical 32,800\n Génie informatique 28,000\n Génie logiciel 28,000</string>
+    <string name="c_te_r_minimale_requise_udem">Minimum Cote R required</string>
+    <string name="cote_r_udem">Architecture 31,569\n Architecture de paysage 26,816\n Biochimie et médecine moléculaire 26,314\n Biologie 28.785\n Cinéma (B) 25,013\n Communication (Sciences de la) 24,047\n Communication et politique 23,000\n Criminologie (B) 29,650\n Criminologie (Mj) 24,070\n Criminologie (Mn) 25,098\n Design d’intérieur 29,652\n Design industriel 24,758\n Droit (B) 31,632\n Éducation préscolaire et ens. Primaire(Mtl)23,000\n Campus Laval 23,000\n Ens.de l’éducation physique et santé 25,017\n Ens.de l’éthique et cultures religieuses 23,000\n Ens.de l’univers social au secondaire 24,500\n Ens. des mathématiques au secondaire 24,500\n Ens.des sciences et technologies 24,000\n Ens. du français au secondaire 24,000\n Ens. du français langue seconde 23,000\n Ens. adaptation scolaire\n Campus Montréal 23,000\n Campus Laval 23,000\n Ergothérapie 31,516\n Études internationales 27,851\n Informatique 25.000\n Kinésiologie 27,940\n Médecine (entrevue) min. 33,047\n Médecine dentaire 34,113\n Médecine vétérinaire 33,808\n Microbiologie et immunologie 27,256\n Musique audition\n Neurosciences 31,255\n Neurosciences cognitive 28,055\n Nutrition 31,804\n Optométrie 34,750\n Pharmacie 34,503\n Physiothérapie 33,917\n Physique et informatique 25,000\n Psychoéducation (B) 27,798\n Psychoéducation (Mn) 27,017\n Psychologie (B)\n Campus Montréal 28,005\n Campus Laval 26,509\n Psychologie (Mj) 27,072\n Psychologie (Mn) 26,096\n Psychologie et sociologie 24,000\n Relations Industrielles (B) 22,048\n Sciences biomédicales 30,923\n Sciences biopharmaceutiques 27,643\n Sc. Infirmières\n Campus Montréal 25,419\n Campus Laval 26,000\n Science politique (B Mj, Mn)24,000\n Sécurité et études policières 26,855\n Traduction 22,000\n Travail social\n Campus Montréal 28,773\n Campus Laval 27,622\n Urbanisme 25,440</string>
+    <string name="c_te_r_minimale_requise_ulaval">Minimum Cote R required</string>
+    <string name="cote_r_ulaval">Administration des affaires 22,000\n Affaires publiques et relations internat 28,503\n Architecture 31,510\n Communication publique 22,000\n Criminologie 29,506\n Droit 30.007\n Éducation au préscolaire et ens.primaire 22,000\n Enseignement de la musique Audition\n Enseignement de l’anglais, langue seconde Test\n Ens.de l’éducation phys. et à la santé 25,025\n Ens.du français, langue seconde 22,866\n Enseignement secondaire (cote minimale exigée)\n Français 22,000\n Mathématiques 22,000\n Sciences et technologie 22,000\n Univers social (histoire et géographie) 22,000\n Univers social (hist, éthique et cul.rel) 22,000\n Ergothérapie 32,074\n Intervention sportive 22,588\n Kinésiologie 24,714\n Médecine Min 33,000\n Médecine dentaire 34.214\n Nutrition 31,625\n Psychoéducation 25,500\n Pharmacie 33,047\n Physiothérapie 30,711 (en date 15 mai 2021)\n Psychologie 27,802\n Sciences biomédicales 27,500\n Sciences infirmières27,085 (en date du 15 mai 2021)\n Travail social 26,815</string>
+    <string name="c_te_r_minimale_requise_usherbrook">Minimum Cote R required</string>
+    <string name="cote_r_usherbrook">Adaptation scolaire et sociale 20,00\n Administration des affaires 24,50\n Communication – cheminement régulier 20,00\n Communication- rédaction 20,00\n Communication - communication 23,70\n Communication -marketing* 24,50\n Doctorat en médecine – (MEM)34,693\n Droit (régulier) 30,10\n Droit (coopératif) 31,50\n Droit- common law 30,10\n Droit- MBA 31,30\n Droit – sciences de la vie 30,10\n Économie 24,00\n Ens.éducation physique/santé 24,20\n Ens.en anglais langue seconde 20,00\n Études environnement (Sc.hum.) 25,40\n Études envrionnement (Sc. nat.) 25,30\n Enseignement secondaire\n Français langue d’enseignement 20,00\n Mathématiques 25,40\n Sciences et technologie 23,20\n Univers social 23,10\n Ens.préscolaire et primaire 22,30\n Génie civil 25,80\n Génie bâtiment 26.00\n Génie robotique 28.40\n Génie électrique 24,00\n Génie informatique 24.70\n Génie chimique 22,40\n Génie mécanique 27,20\n Génie biotechnologique23,70\n Géomatique app à l’environnement 22,70\n Kinésiologie 24,60\n Ergothérapie 31,00\n Physiothérapie 32,10\n Pharmacologie 23,40\n Psychoéducation 26,20\n Psychologie (bac) 28,60\n Sciences infirmières INITIALE\n Sherbrooke 27,70\n Longueuil 25,70\n Service social 27,60\n Traduction professionnelle 20,00</string>
+    <string name="programme_d_universit">University program</string>
+
+
+
+    <string name="information_sur_la_cote_r">Cote R Information</string>
+    <string name="qu_est_ce_que_la_cote_r">What is a Cote R</string>
+    <string name="explication_de_cote_r">The college performance rating (CRC) is an academic record evaluation method used by most Quebec universities to manage admission to certain programs. Each course has its R rating and all the courses taken give a “general” R rating. It is therefore important to take college studies seriously from the start of the first semester.</string>
+    <string name="la_r_ussite_ou_l_chec_de_chaque_cours_est_important">THE PASS OR FAILURE OF EACH COURSE IS IMPORTANT</string>
+    <string name="explication_echec">A failure cannot be erased from the academic record and therefore has an impact on the “general” R score used for admission to universities, especially in quota programs.</string>
+    <string name="le_calcul_de_la_cote_de_rendement_au_coll_gial">COLLEGE PERFORMANCE RATING CALCULATION</string>
+    <string name="analyse_cote_r">The analysis of the file by means of the college performance rating requires, for each course, failed or passed failed or passed failed or passed, the calculation of a Z score which makes it possible to express the relative position of a student in a group and the calculation of a correction factor (IFG), which makes it possible to estimate the relative strength of the group compared to that of the other groups. These calculations are carried out at the request of the Conference of Rectors and Principals of Quebec Universities (CREPUQ) by the Ministry of Education of the Ministry of Education, Recreation and Sport for each of the scores listed for Recreation and Sport in the report card, with the exception of the marks of the make-up courses. The formula for calculating the college performance rating (CRC) is as follows: CRC = (Z+IFG+5) x 5*</string>
+    <string name="une_cote_situe_l_eleve">A RATING THAT POSITIONS THE STUDENT COMPARED WITH THE GROUP AVERAGE</string>
+    <string name="explication_de_la_note_par_rapport_a_moyenne">Most achievement ratings for an entire college record fall between 15 and 35, here is a benchmark illustrating this order of magnitude: between 32 and 35 (85% and above) - marks well above average ; between 29.5 and 31.9 (80% to 85%) - marks above average; between 26 and 29.4 (75% to 80%) - marks above the average; between 20 and 25.9 (65% to 75%) - marks in the average.</string>
+    <string name="https_www_cmaisonneuve_qc_ca">Source : https://www.cmaisonneuve.qc.ca</string>
+
+</resources>

@@ -20,17 +20,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Cote R par cours :"
+            android:text="@string/cote_r_par_cours"
             android:textSize="32sp"/>
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipper_layout"
         android:layout_width="match_parent"
         android:layout_height="410dp"
-        android:id="@+id/recyclerview_cote_r">
+        >
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="410dp"
+            android:id="@+id/recyclerview_cote_r"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp">

@@ -23,10 +23,11 @@
         <entry key="app/src/main/res/drawable/ic_coter_Real.xml" value="0.1645" />
         <entry key="app/src/main/res/drawable/ic_echange_de_livre.xml" value="0.1985" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.1745" />
         <entry key="app/src/main/res/drawable/ic_profil_view.xml" value="0.1985" />
         <entry key="app/src/main/res/drawable/ic_universite.xml" value="0.1985" />
         <entry key="app/src/main/res/layout/activity_acceuille.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_connection.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_connection.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_cote_ractivity.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_creation_profil.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_enregistrement.xml" value="0.3098958333333333" />
@@ -36,6 +37,7 @@
         <entry key="app/src/main/res/layout/activity_menu_v2.xml" value="0.19947916666666668" />
         <entry key="app/src/main/res/layout/activity_menu_v2_activty.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_menu_v3.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_modifier_cote_r.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_profil.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_universite.xml" value="0.3098958333333333" />
@@ -44,11 +46,20 @@
         <entry key="app/src/main/res/layout/fragment_calculatricecoter_realcalcul.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_echange_livre.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_encouragement.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_information_cote_r.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_pomodoro.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_profil.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_profil2.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_universite_concordia.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_universite_mcgill.xml" value="0.25835866261398177" />
+        <entry key="app/src/main/res/layout/fragment_universite_poly.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_universite_udem.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_universite_ulaval.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_universite_usherbrook.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_universitez.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/recyclerview_row.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/pays_layout_row.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/recyclerview_row.xml" value="0.335" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_coter.xml" value="0.1645" />
