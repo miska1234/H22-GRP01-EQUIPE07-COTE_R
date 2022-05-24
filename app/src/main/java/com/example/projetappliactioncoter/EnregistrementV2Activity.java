@@ -29,13 +29,18 @@ public class EnregistrementV2Activity extends AppCompatActivity {
     private Button enregistrer;
     private FirebaseAuth mAuth;
 
-    //TODO mettre les noms d ecoles et de programme dans une liste et faire bhy banderolz
 
+
+    /**
+     * Créer l’activité de la page où l’on peut voir toutes nos cote r
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enregistrement_v2);
 
+        //Initialisation de toutes les différents objets dans notre fichier .xml
         nomComplet = findViewById(R.id.editNomComplet);
         age = findViewById(R.id.editTextAge);
         ecole = findViewById(R.id.editTextEcole);
@@ -50,16 +55,30 @@ public class EnregistrementV2Activity extends AppCompatActivity {
 
     }
 
+    /**
+     * Méthode permettant de pouvoir clicker sur un boutton pour enregistrer un utilisateur
+     * @param view
+     */
     public void onClick(View view) {
         EnregistrerUtilisateur();
     }
 
+    /**
+     * Méthode permettant de pouvoir clicker sur un boutton pour pouvoir changer de fragment à celui de connexion
+     * @param view
+     */
     public void onClickDejaCompte(View view) {
         Intent switchToConnection = new Intent(EnregistrementV2Activity.this, ConnectionActivity.class);
         startActivity(switchToConnection);
     }
 
+    /**
+     * Méthode qui permet d’enregistrer l’utilisateur dans le fire base
+     * avec l’information recueillie dans les champs de texte
+     */
     public void EnregistrerUtilisateur(){
+
+        //Recueillir l’information sur l’utilisateur
         String nomComplet = this.nomComplet.getText().toString().trim();
         String age = this.age.getText().toString().trim();
         String ecole = this.ecole.getText().toString().trim(); //Faire une bande roulante avc tt les skool
@@ -67,6 +86,8 @@ public class EnregistrementV2Activity extends AppCompatActivity {
         String email = this.email.getText().toString().trim();
         String motDePasse = this.motDePasse.getText().toString().trim();
 
+
+        //Vérification que tous les champs de texte soient remplies
         if(nomComplet.isEmpty()){
             this.nomComplet.setError(getString(R.string.nomCompletRequis));
             this.nomComplet.requestFocus();
@@ -107,21 +128,36 @@ public class EnregistrementV2Activity extends AppCompatActivity {
             return;
         }
 
+        //Méthode de firebase qui permet de créer un utilisateur
         mAuth.createUserWithEmailAndPassword(email, motDePasse)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    /**
+                     * Méthode qui permet de faire une action quand la méthode fonctionne
+                     * @param task
+                     */
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             ArrayList<CoteR> coteRS = new ArrayList<>();
-                            //Creer une liste fictive qui va servir qu a creer la liste dans le database(va etre remplacer apres)
+                            //Creer une liste fictive qui va servir qu a creer la liste dans le database
+                            //(Doit toujours être là car si on l’enlève, la arraylist n’existera plus et on ne pourra donc plus rajouter de données)
                             coteRS.add(new CoteR("Effacable", (double)0, (double)0, (double)0, (double)0, (double)0));
+
+                            //Création de l’utilisateur
                             Utilisateur utilisateur = new Utilisateur(nomComplet, age, ecole, programme, email, coteRS);
 
+                            //Envoie d’un email de vérification
                             FirebaseUser user = mAuth.getCurrentUser();
                             user.sendEmailVerification();
+
+
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(utilisateur).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                /**
+                                 * Méthode de firebase qui vérifie que tout fonctionne bien et qui change de fragment
+                                 * @param task
+                                 */
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
@@ -144,6 +180,12 @@ public class EnregistrementV2Activity extends AppCompatActivity {
 
     }
 
+    /**
+     * Méthode qui vérifie si le mot de passe est assez complexe
+     * (Vérification du nombre de charactère, de charactères spéciaux, de chiffres, de charactère majuscule)
+     * @param password
+     * @return
+     */
     private boolean passwordVerifier(String password){
 
 

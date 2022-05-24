@@ -31,38 +31,18 @@ public class ProfilFragment extends Fragment {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-/*
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-*/
+    /**
+     * Constructeur
+     */
     public ProfilFragment() {
         // Required empty public constructor
     }
-/*
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfilFragment.
 
-    // TODO: Rename and change types and number of parameters
-    public static ProfilFragment newInstance(String param1, String param2) {
-        ProfilFragment fragment = new ProfilFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-*/
+    /**
+     * Méthode non utilisée pour les fragments
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +50,13 @@ public class ProfilFragment extends Fragment {
     }
 
 
+    /**
+     * Créer le fragment de la page du profil
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -79,6 +66,7 @@ public class ProfilFragment extends Fragment {
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
+        //Initialisation de toutes les différents objets dans notre fichier .xml
         final TextView nomCompletTextView = (TextView) view.findViewById(R.id.texte_profil_nom_shown);
         final TextView courrielTextView = (TextView) view.findViewById(R.id.texte_profil_email_shown);
         final TextView ageTextView = (TextView) view.findViewById(R.id.texte_profil_age_shown);
@@ -86,13 +74,16 @@ public class ProfilFragment extends Fragment {
         final TextView programmeTextView = (TextView) view.findViewById(R.id.texte_profil_programme_shown);
         final TextView coteRTextView = (TextView) view.findViewById(R.id.texte_profil_coteR_shown);
 
-        //TODO rajouter un progress bar en attendant que les info load in avec un addOnCompleteListner
+
         //TODO rajouter un image picker pour l image du profil
+
+        //Entrer dans la branche des users dans le database pour y faire des changements
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Utilisateur userProfil = snapshot.getValue(Utilisateur.class);
 
+                //Display les informations du user dans le view
                 if(userProfil != null){
                     String nomComplet = userProfil.nomComplet;
                     String courriel = userProfil.email;
@@ -106,8 +97,11 @@ public class ProfilFragment extends Fragment {
                     ecoleTextView.setText(ecole);
                     programmeTextView.setText(programme);
 
+                    //Si le user a une arraylist seulement avec la cote r "effacable", montrer qu’il en a pas
                     if(userProfil.coteRArraylist.get(0).matiere.equals("Effacable") && userProfil.coteRArraylist.size() == 1){
                         coteRTextView.setText("Pas de Cote R encore");
+
+                    //Sinon calculer la cote r et la montrer
                     } else {
                         coteRTextView.setText(String.valueOf(CoteR.calculCoteRFinal(userProfil.coteRArraylist)));
                     }

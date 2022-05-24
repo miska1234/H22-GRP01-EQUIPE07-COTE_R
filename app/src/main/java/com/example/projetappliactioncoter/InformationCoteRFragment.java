@@ -10,6 +10,13 @@ import android.view.ViewGroup;
 
 public class InformationCoteRFragment extends Fragment{
 
+    /**
+     * Créer le fragment de la page de l’information sur la cote r
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 

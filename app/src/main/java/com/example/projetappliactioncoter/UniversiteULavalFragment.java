@@ -9,6 +9,13 @@ import androidx.fragment.app.Fragment;
 
 public class UniversiteULavalFragment extends Fragment {
 
+    /**
+     * Créer le fragment pour les cote r à l’université de ULaval
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 

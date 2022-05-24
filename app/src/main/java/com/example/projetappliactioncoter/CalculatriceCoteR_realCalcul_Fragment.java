@@ -25,21 +25,30 @@ import java.util.ArrayList;
 
 public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
 
-    EditText matiere, note, moyenne, ecartType, moyenneSecondaire, nbr_unites;
-    Button ajouter_modierButton;
+    private EditText matiere, note, moyenne, ecartType, moyenneSecondaire, nbr_unites;
+    private Button ajouter_modierButton;
     FirebaseUser user;
     DatabaseReference reference;
     String userID;
 
+    /**
+     * Créer l’activité de la page de calculatrice de cote R
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_calculatricecoter_realcalcul, container, false);
 
+        //Initialise des variables pour avoir acces à la base de donnée
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
+        //Initialisation de toutes les différents objets dans notre fichier .xml
         matiere = view.findViewById(R.id.matiere_calculatrice_cote_r);
         note = view.findViewById(R.id.note_calculatrice_cote_r);
         moyenne = view.findViewById(R.id.moyenne_calculatrice_cote_r);
@@ -48,6 +57,7 @@ public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
         ajouter_modierButton = view.findViewById(R.id.ajouterModifiercoter);
         nbr_unites = view.findViewById(R.id.nbr_unites_calculatrice_cote_r);
 
+        //OnClick pour le boutton ajouter cote r
         ajouter_modierButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +70,9 @@ public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
     }
 
 
+    /**
+     * Ajouter une cote r en prenant tout ce qui à était entrer dans les champs de texte
+     */
     public void ajouterCoteRVerification() {
         String matiere = this.matiere.getText().toString().trim();
         String note = this.note.getText().toString().trim();
@@ -68,6 +81,8 @@ public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
         String moyenneSecondaire = this.moyenneSecondaire.getText().toString().trim();
         String nbrUnites = this.nbr_unites.getText().toString().trim();
 
+        //Faire la vérification pour chaque champs de texte s’ils sont vides et s’ils ont une
+        //valeurs qui a du sens (de 0 à 100 pour les notes)
         if (matiere.isEmpty()) {
             this.matiere.setError("Matière manquante");
             this.matiere.requestFocus();
@@ -131,26 +146,43 @@ public class CalculatriceCoteR_realCalcul_Fragment extends Fragment {
         }
 
 
+        //Entrer dans la branche des users dans le database pour y faire des changements
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+
+            /**
+             * Méthode overided qui permet de changer les valeurs dans la database
+             * @param snapshot
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //Prend la valeur de l’utilisateur qui utilise l’application
                 Utilisateur userProfil = snapshot.getValue(Utilisateur.class);
 
+
                 if(userProfil != null){
+                    //Initialliser une nouvelle arraylist avec celle dans la database du user
                     ArrayList<CoteR> coteRArrayList = userProfil.coteRArraylist;
 
+                    //Rajouter toutes les informations qui ont étaient entrées par l’utilisateur dans la array list
                     coteRArrayList.add(new CoteR(matiere,  Double.parseDouble(note), Double.parseDouble(moyenne), Double.parseDouble(ecartType), Double.parseDouble(moyenneSecondaire), Double.parseDouble(nbrUnites)));
+
+                    //Reset la valeur du arraylist dans le database avec la nouvelle arraylist(avec la nouvelle cote r ajoutée)
                     reference.child(userID).child("coteRArraylist").setValue(coteRArrayList);
                 }
 
             }
 
+            /**
+             * Méthode permettant de gérer les erreurs en lien avec la database
+             * @param error
+             */
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getContext(), "Il y a eu une erreur!", Toast.LENGTH_SHORT).show();
             }
         });
 
+        //Changer de Fragment (un type de view) pour revenir à la page où il y a les cotes R de tous les cours
         Fragment fragmentCalcCoteR = new CalculatriceCoteRFragment();
         FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
         fm.replace(R.id.fragment_container, fragmentCalcCoteR).commit();

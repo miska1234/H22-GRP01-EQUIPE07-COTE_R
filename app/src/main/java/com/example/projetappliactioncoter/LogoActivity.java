@@ -13,24 +13,31 @@ import java.util.TimerTask;
 
 public class LogoActivity extends AppCompatActivity {
 
-    Timer timer;
+    private Timer timer;
     FirebaseAuth mAuth;
     FirebaseUser user;
 
+    /**
+     * Créer l’activité de la page où l’on peut voir le logo pour quelque seconde
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
 
-        //Fait en sorte de keep le user logged in
-        //TODO faire en sorte qu il ne peut pas back button a n importe kelle page avec onBackButtonPressed()
         mAuth = FirebaseAuth.getInstance();
 
 
         timer = new Timer();
+
+        //Laisser le logo pendant 3 secondes
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
+
+                //Vérifie si il y a déjà un compte connecter et
+                //si il y en a un, changer d’activité à celle du menu, sinon, à celle de l’acceuille
                 if(mAuth.getCurrentUser() != null){
                     startActivity(new Intent(LogoActivity.this, MenuV2Activity.class));
                 } else {

@@ -20,27 +20,45 @@ public class EncouragementFragment extends Fragment {
     public TextView textViewEncouragement, textViewMotivation;
     public ArrayList<String> listeDeCitation;
 
+    /**
+     * Constructeur qui initialise la liste de citation
+     */
     public EncouragementFragment(){
         setListeDeCitation();
     }
 
+    /**
+     * Créer le fragment de la page de l’encouragement
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_encouragement, container, false);
+
+        //Initialisation de toutes les différents objets dans notre fichier .xml
         linearLayoutEncouragement = view.findViewById(R.id.layout_motivation_click);
         textViewEncouragement = view.findViewById(R.id.texte_encouragement);
         textViewMotivation = view.findViewById(R.id.motivationnnn);
 
 
 
+        //Regarde si le texte est celui en anglais ou en français pour reset la liste de citation
         if(textViewMotivation.getText().equals("Motivation!!!")){
             setListeDeCitationAnglais();
         } else {
             setListeDeCitation();
         }
 
+        //On click pour changer de citation
         linearLayoutEncouragement.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Méthode qui permet de changer de citation
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 changerDeCitationEncouragement();
@@ -51,6 +69,9 @@ public class EncouragementFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Méthode qui crée une liste de citation en français
+     */
     public void setListeDeCitation(){
         listeDeCitation = new ArrayList<>();
         listeDeCitation.add("'Dans le domaine des idées, tout dépend de l’enthousiasme. " +
@@ -82,6 +103,9 @@ public class EncouragementFragment extends Fragment {
         listeDeCitation.add("'Je peux accepter l’échec, tout le monde échoue dans quelque chose. Mais je ne peux accepter de ne pas essayer.'\n\n -Michael Jordan");
     }
 
+    /**
+     * Méthode qui crée une liste de citation en anglais
+     */
     public void setListeDeCitationAnglais(){
         listeDeCitation = new ArrayList<>();
         listeDeCitation.add("'In the realm of ideas, everything depends on enthusiasm. " +
@@ -113,6 +137,9 @@ public class EncouragementFragment extends Fragment {
         listeDeCitation.add("'I can accept failure, everyone fails at something. But I can't accept not trying.'\n\n -Michael Jordan");
     }
 
+    /**
+     * Méthode qui permet de set une citation au hasard parmi ceux dans la liste de citation
+     */
     public void changerDeCitationEncouragement(){
         int max = listeDeCitation.size();
         textViewEncouragement.setText(listeDeCitation.get((int)(Math.random()*max - 1)));

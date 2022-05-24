@@ -24,26 +24,39 @@ import java.util.ArrayList;
 
 public class Modifier_coteR extends Fragment {
 
-    EditText matiere, note, moyenne, ecartType, moyenneSecondaire, nbr_unites;
-    Button ajouter_modierButton;
+    private EditText matiere, note, moyenne, ecartType, moyenneSecondaire, nbr_unites;
+    private Button ajouter_modierButton;
     FirebaseUser user;
     DatabaseReference reference;
     String userID;
     int position;
 
+    /**
+     * Constructeur
+     * @param position
+     */
     public Modifier_coteR(int position){
         this.position = position;
     }
 
+    /**
+     * Créer le fragment de la page de la modification de cote r
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.activity_modifier_cote_r, container, false);
 
+        //Initialise des variables pour avoir acces à la base de donnée
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
+        //Initialisation de toutes les différents objets dans notre fichier .xml
         matiere = view.findViewById(R.id.matiere_modifier_cote_r);
         note = view.findViewById(R.id.note_modifier_cote_r);
         moyenne = view.findViewById(R.id.moyenne_modifier_cote_r);
@@ -52,6 +65,7 @@ public class Modifier_coteR extends Fragment {
         ajouter_modierButton = view.findViewById(R.id.Modifiercoter);
         nbr_unites = view.findViewById(R.id.nbr_unites_modifier_cote_r);
 
+        //OnClick pour le boutton modifier cote r
         ajouter_modierButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +77,9 @@ public class Modifier_coteR extends Fragment {
         return view;
     }
 
-
+    /**
+     * Modifier une cote r en prenant tout ce qui à était entrer dans les champs de texte
+     */
     public void ajouterCoteRVerification() {
         String matiere = this.matiere.getText().toString().trim();
         String note = this.note.getText().toString().trim();
@@ -72,6 +88,9 @@ public class Modifier_coteR extends Fragment {
         String moyenneSecondaire = this.moyenneSecondaire.getText().toString().trim();
         String nbrUnites = this.nbr_unites.getText().toString().trim();
 
+
+        //Faire la vérification pour chaque champs de texte s’ils sont vides et s’ils ont une
+        //valeurs qui a du sens (de 0 à 100 pour les notes)
         if (matiere.isEmpty()) {
             this.matiere.setError("Matière manquante");
             this.matiere.requestFocus();
@@ -134,15 +153,19 @@ public class Modifier_coteR extends Fragment {
             return;
         }
 
-
+        //Entrer dans la branche des users dans le database pour y faire des changements
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //Prend la valeur de l’utilisateur qui utilise l’application
                 Utilisateur userProfil = snapshot.getValue(Utilisateur.class);
 
                 if(userProfil != null){
+
+                    //Initialliser une nouvelle arraylist avec celle dans la database du user
                     ArrayList<CoteR> coteRArrayList = userProfil.coteRArraylist;
 
+                    //Modifier toutes les informations qui ont étaient entrées par l’utilisateur dans la array list
                     coteRArrayList.set(position + 1, new CoteR(matiere,  Double.parseDouble(note), Double.parseDouble(moyenne), Double.parseDouble(ecartType), Double.parseDouble(moyenneSecondaire), Double.parseDouble(nbrUnites)));
                     reference.child(userID).child("coteRArraylist").setValue(coteRArrayList);
                 }
@@ -155,6 +178,7 @@ public class Modifier_coteR extends Fragment {
             }
         });
 
+        //Changer de Fragment (un type de view) pour revenir à la page où il y a les cotes R de tous les cours
         Fragment fragmentCalcCoteR = new CalculatriceCoteRFragment();
         FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
         fm.replace(R.id.fragment_container, fragmentCalcCoteR).commit();

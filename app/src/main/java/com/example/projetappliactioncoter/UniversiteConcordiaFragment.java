@@ -9,6 +9,13 @@ import androidx.fragment.app.Fragment;
 
 public class UniversiteConcordiaFragment extends Fragment {
 
+    /**
+     * Créer le fragment pour les cote r à l’université de Concordia
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
