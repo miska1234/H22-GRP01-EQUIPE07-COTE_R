@@ -96,7 +96,7 @@
     <string name="analyse_cote_r">L’analyse du dossier au moyen de la cote de rendement au collégial exige, pour chaque cours, échoué ou réussi échoué ou réussi échoué ou réussi, le calcul d’une cote Z qui permet d’exprimer la position relative d’un élève dans un groupe et le calcul d’un facteur de correction (IFG), qui permet d’estimer la force relative du groupe par rapport à celle des autres groupes. Ces calculs sont effectués à la demande de la Conférence des recteurs et des principaux des universités du Québec (CREPUQ) par le ministère de l’Éducation du ministère de l’Éducation du Loisir et du Sport pour chacune des notes inscrites Loisir et du Sport au bulletin, à l’exception des notes des cours d’appoint. La formule de calcul de la cote de rendement au collégial (CRC) est la suivante : CRC = (Z+IFG+5) x 5*</string>
     <string name="une_cote_situe_l_eleve">UNE COTE QUI SITUE L’ÉLÈVE PAR RAPPORT À LA MOYENNE DU GROUPE</string>
     <string name="explication_de_la_note_par_rapport_a_moyenne">La plupart des cotes de rendement pour l’ensemble d’un dossier collégial se situent entre 15 et 35, voici un cadre de référence illustrant cet ordre de grandeur : entre 32 et 35 (85 % et plus) - notes très supérieures à la moyenne; entre 29,5 et 31,9 (80 % à 85 %) - notes supérieures à la moyenne; entre 26 et 29,4 (75 % à 80 %) - notes au-dessus de la moyenne; entre 20 et 25,9 (65 % à 75 %) - notes dans la moyenne.</string>
-    <string name="https_www_cmaisonneuve_qc_ca">https://www.cmaisonneuve.qc.ca</string>
+    <string name="https_www_cmaisonneuve_qc_ca">Source : https://www.cmaisonneuve.qc.ca</string>
 
     <!-- Shrink le nombre d uni pcq sinn trop long-->
     <!-- TODO Pour le futur rajouter plus d univeritez-->
