@@ -115,7 +115,7 @@ public class MenuV2Activity extends AppCompatActivity  {
 
                 switch(item.getItemId()){
                     case R.id.echange_livre:
-                        fragment = new EchangeLivreFragment();
+                        fragment = new InformationCoteRFragment();
                         break;
                     case R.id.cote_r_logo:
                         fragment = new CalculatriceCoteRFragment();
