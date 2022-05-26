@@ -14,7 +14,7 @@
     <a href="https://github.com/miska1234/H22-GRP01-EQUIPE07-COTE_R"><strong>Explorer la documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://youtu.be/3891K8Fa3_s">Demo de l’application</a>
    
   </p>
 </div>
